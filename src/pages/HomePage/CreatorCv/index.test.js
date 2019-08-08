@@ -32,7 +32,7 @@ describe('CreatorCv', () => {
       expect(wrapper.find(STEP_CONTAINER).exists()).toBeFalsy()
     })
 
-    describe('Name of the group', () => {
+    describe('Props', () => {
       test.each([
         ['description', { description: description }, CREATOR_CV_SECTION, description],
         ['id', { id: id }, CREATOR_CV_BUTTON, id],

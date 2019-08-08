@@ -83,7 +83,8 @@ export const translations = {
   },
 
   footer: {
-    socialList: [
+    icon: 'LOGO',
+    socialItemsList: [
       {
         bgColor: FbColor,
         href: 'www.facebook.com',
@@ -175,6 +176,15 @@ export const translations = {
   },
 
   header: {
+    href: 'google.pl',
+    icon: 'LOGO',
+    id: '1',
+    label: 'Zdobądź bilet',
+    onClick: () => null,
+    text: 'Zaloguj się'
+  },
+
+  homepageSectionOne: {
     icon: 'icon',
     description: 'Stwórz piękne CV, określ idealnego Pracodawcę i przekonaj go do siebie na targach pracy Career EXPO.',
     id: '2',

@@ -6,7 +6,7 @@ import {
   CardListElement
 } from './components'
 
-import Card from '../Card'
+import Card from '../../../components/Card'
 
 const CardList = ({
   itemsList
@@ -14,7 +14,10 @@ const CardList = ({
   <CardListContainer>
     {
       itemsList.map((e, index) => (
-        <CardListElement key={index} >
+        <CardListElement
+          data-test='cardListElement'
+          key={index}
+        >
           <Card
             data-test='card'
             description={e.description}
@@ -37,4 +40,8 @@ CardList.propTypes = {
       title: PropTypes.string
     })
   )
+}
+
+CardList.defaultProps = {
+  itemsList: []
 }

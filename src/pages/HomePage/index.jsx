@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { HomepageContainer } from './components'
 import {
   FbColor,
   InColor,
@@ -8,14 +7,18 @@ import {
   YtColor
 } from '../../assets/styles/colors'
 
+import { HomepageContainer } from './components'
+import { translations } from '../../translations'
+
 import Banner from '../../components/Banner'
 import Button from '../../components/Button'
 import Card from '../../components/Card'
 import CardList from '../../components/CardList'
-import CreatorCv from '../../components/CreatorCv'
+import CreatorCv from './CreatorCv'
 import FeaturesEmployer from '../../components/FeaturesEmployer'
 import Footer from '../../components/Footer'
 import FooterMenu from '../../components/FooterMenu'
+import Header from '../../components/Header'
 import HomepageSectionOne from './HomepageSectionOne'
 import InnerWrapper from '../../components/InnerWrapper'
 import Rectangle from '../../components/Rectangle'
@@ -25,91 +28,65 @@ import Step from '../../components/Step'
 
 const Homepage = () => (
   <HomepageContainer>
+    <Header
+      buttonLabel={translations.header.label}
+      href={translations.header.href}
+      icon={translations.header.icon}
+      id={translations.header.id}
+      linkLabel={translations.header.text}
+      onClick={translations.header.onClick}
+    />
     <InnerWrapper>
       <HomepageSectionOne
-        icon='icon'
-        description='Stwórz piękne CV, określ idealnego Pracodawcę i przekonaj go do siebie na targach pracy Career EXPO.'
-        id='2'
-        label='Załóż bezpłatne konto'
-        onClick={() => null}
-        title='Pomożemy Ci znaleźć wymarzoną pracę'
+        description={translations.homepageSectionOne.description}
+        icon={translations.homepageSectionOne.icon}
+        id={translations.homepageSectionOne.id}
+        label={translations.homepageSectionOne.label}
+        onClick={translations.homepageSectionOne.onClick}
+        title={translations.homepageSectionOne.title}
       />
 
-      <CardList
-        itemsList={[
-          {
-            description: 'Rekruter potrzebuje tylko 14 sekund, aby odrzucić Twoje CV i 4 minuty, aby je zaakceptować. Spraw, by zainteresował się Twoją osobą i zaprosił do kolejnego etapu rekrutacji!',
-            icon: 'icon',
-            title: 'Stwórz skuteczne CV'
-          },
-          {
-            description: 'Dla jednego międzynarodowa firma to zaleta, a dla drugiego wada.  Praca zdalna może być zbawieniem lub udręką. Pokażemy Ci, którzy Pracodawcy mają to, czego szukasz!',
-            icon: 'icon',
-            title: 'Określ cechy idealnego Pracodawcy'
-          },
-          {
-            description: 'Przyjdź na targi pracy Career EXPO i przekonaj wybranego Pracodawcę, aby zatrudnił właśnie Ciebie! Weź udział w Szybkich Rekrutacjach, bezpłatnych szkoleniach i konsultacjach kariery.',
-            icon: 'icon',
-            title: 'Poznajcie się… i aplikuj!'
-          }
-        ]}
-      />
+      <CardList itemsList={translations.cardList.itemsList} />
 
       <CreatorCv
-        description='Stwórz skuteczne CV w mniej niż 10 minut.'
-        title='Bezpłatny kreator CV'
-        itemsList={[
-          {
-            description: 'Wybierz jeden z wielu atrakcyjnych szablonów stworzonych przez grafików i rekruterów! Wybierz CV, które rozkocha w sobie Twojego przyszłego Pracodawcę. ',
-            number: '1',
-            title: 'Wybierz szablon'
-          },
-          {
-            description: 'Uzupełnij swoje dane i dodaj zdjęcie. Zapisz szablon jako jeden z wielu i dostosowuj do różnych stanowisk! ',
-            number: '2',
-            title: 'Uzupełnij dane'
-          },
-          {
-            description: 'Pobierz CV lub aplikuj bezpośrednio z Career EXPO! Całkowicie bezpłatnie.',
-            number: '3',
-            title: 'Pobierz swoje CV'
-          }
-        ]}
-        label='Chcę stworzyć skuteczne CV'
-        onClick={() => null}
-        id='3'
+        description={translations.creatorCv.description}
+        id={translations.creatorCv.id}
+        itemsList={translations.creatorCv.itemsList}
+        label={translations.creatorCv.label}
+        onClick={translations.creatorCv.onClick}
+        title={translations.creatorCv.title}
       />
 
       <FeaturesEmployer
-        description='Najpierw powiedz nam kim jesteś i czego oczekujesz od życia, a my zarekomendujemy Ci Pracodawcę, który odpowiada Twoim wartościom. Choć związek z firmą najczęściej nie jest wieczny, to w pracy spędzamy 1/3 swojego życia - dopasuj więc kulturę organizacyjną do Twoich preferencji, abyś czuł się jak ryba w wodzie!'
-        title='Określ cechy idealnego Pracodawcy'
-        onClick={() => null}
-        label='Załóż bezpłatne konto'
-        itemsList={[
-          {
-            description: 'Wolisz samodzielną pracę i formalną atmosferę?',
-            icon: 'icon'
-          },
-          {
-            description: 'Mamy takich Pracodawców!'
-          },
-          {
-            description: 'Preferujesz pracę zdalną i dużą dozę zaufania?',
-            icon: 'icon'
-          },
-          {
-            description: 'Chcesz pracować w dużym zespole i jeździć na światowej rangi konferencje?',
-            icon: 'icon'
-          }
-        ]}
+        description={translations.featuresEmployer.description}
+        itemsList={translations.featuresEmployer.itemsList}
+        label={translations.featuresEmployer.label}
+        onClick={translations.featuresEmployer.onClick}
+        title={translations.featuresEmployer.title}
       />
 
-      <Footer />
+      <Footer
+        icon={translations.footer.icon}
+        linksListCenter={translations.footer.menuCenter.linksList}
+        linksListLeft={translations.footer.menuLeft.linksList}
+        linksListRight={translations.footer.menuRight.linksList}
+        socialItemsList={translations.footer.socialItemsList}
+        titleCenter={translations.footer.menuCenter.title}
+        titleLeft={translations.footer.menuLeft.title}
+        titleRight={translations.footer.menuRight.title}
+      />
       <br />
       <br />
       <br />
       <br />
       ========================================================================================================================================================================
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
       <br />
       <br />
       <br />

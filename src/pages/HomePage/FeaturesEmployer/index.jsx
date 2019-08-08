@@ -10,9 +10,9 @@ import {
   FeaturesEmployerSection
 } from './components'
 
-import Button from '../Button'
-import Rectangle from '../Rectangle'
-import Section from '../Section'
+import Button from '../../../components/Button'
+import Rectangle from '../../../components/Rectangle'
+import Section from '../../../components/Section'
 
 const FeaturesEmployer = ({
   description,

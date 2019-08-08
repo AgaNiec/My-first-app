@@ -9,9 +9,9 @@ import {
   StepElement
 } from './components'
 
-import Button from '../Button'
-import Section from '../Section'
-import Step from '../Step'
+import Button from '../../../components/Button'
+import Section from '../../../components/Section'
+import Step from '../../../components/Step'
 
 const CreatorCv = ({
   description,
@@ -54,7 +54,6 @@ const CreatorCv = ({
       />
     </CreatorCvButton>
   </CreatorCvContainer>
-
 )
 
 export default CreatorCv

@@ -11,10 +11,11 @@ import {
   FooterSocialMediaContent
 } from './components'
 
-import FooterMenu from '../FooterMenu'
-import SocialList from '../SocialMedia/SocialList'
+import FooterMenu from '../../../components/FooterMenu'
+import SocialList from '../../../components/SocialMedia/SocialList'
 
 const Footer = ({
+  icon,
   linksListCenter,
   linksListLeft,
   linksListRight,
@@ -26,12 +27,14 @@ const Footer = ({
   <FooterConteiner>
     <FooterLeft>
       <FooterSocialMedia>
-        <FooterLogo>LOGO</FooterLogo>
+        <FooterLogo data-test='footerLogo'>
+          {icon}
+        </FooterLogo>
 
         <FooterSocialMediaContent>
           <SocialList
-            itemsList={socialItemsList}
             data-test='footerSocialList'
+            itemsList={socialItemsList}
           />
         </FooterSocialMediaContent>
       </FooterSocialMedia>
@@ -40,19 +43,19 @@ const Footer = ({
     <FooterRight>
       <FooterMenuContainer>
         <FooterMenu
-          title={titleLeft}
-          linksList={linksListLeft}
           data-test='footerMenuLeft'
+          linksList={linksListLeft}
+          title={titleLeft}
         />
         <FooterMenu
-          title={titleCenter}
-          linksList={linksListCenter}
           data-test='footerMenuCenter'
+          linksList={linksListCenter}
+          title={titleCenter}
         />
         <FooterMenu
-          title={titleRight}
-          linksList={linksListRight}
           data-test='footerMenuRight'
+          linksList={linksListRight}
+          title={titleRight}
         />
       </FooterMenuContainer>
     </FooterRight>
@@ -62,6 +65,7 @@ const Footer = ({
 export default Footer
 
 Footer.propTypes = {
+  icon: PropTypes.string,
   linksListCenter: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string,
