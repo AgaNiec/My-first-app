@@ -14,23 +14,23 @@ import Button from '../../../components/Button'
 import { H4 } from '../../../components/Typography/components'
 
 const Header = ({
+  buttonId,
   buttonLabel,
-  href,
-  icon,
-  id,
+  buttonOnClick,
+  linkHref,
   linkLabel,
-  onClick
+  logo
 }) => (
   <HeaderContainer>
-    <HeaderLogo data-test='headerLogoIcon'>
-      {icon}
+    <HeaderLogo data-test='headerLogo'>
+      {logo}
     </HeaderLogo>
 
     <HeaderLinkButton>
       <HeaderLinkContainer>
         <HeaderLink
           data-test='headerLink'
-          href={href}
+          href={linkHref}
         >
           <H4 data-test='headerLinkH4'>
             {linkLabel}
@@ -41,9 +41,9 @@ const Header = ({
       <HeaderButton >
         <Button
           data-test='headerButton'
-          id={id}
+          id={buttonId}
           label={buttonLabel}
-          onClick={onClick}
+          onClick={buttonOnClick}
         />
       </HeaderButton>
     </HeaderLinkButton>
@@ -53,13 +53,13 @@ const Header = ({
 export default Header
 
 Header.propTypes = {
-  buttonLabel: PropTypes.string,
-  href: PropTypes.string,
-  icon: PropTypes.string,
-  id: PropTypes.oneOfType([
+  buttonId: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string
   ]).isRequired,
+  buttonLabel: PropTypes.string,
+  buttonOnClick: PropTypes.func,
+  linkHref: PropTypes.string,
   linkLabel: PropTypes.string,
-  onClick: PropTypes.func
+  logo: PropTypes.string
 }
