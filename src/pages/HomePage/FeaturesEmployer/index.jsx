@@ -11,7 +11,7 @@ import {
 } from './components'
 
 import Button from '../../../components/Button'
-import Rectangle from '../../../components/Rectangle'
+import RectangleItem from '../../../components/Rectangle/RectangleItem'
 import Section from '../../../components/Section'
 
 const FeaturesEmployer = ({
@@ -47,8 +47,8 @@ const FeaturesEmployer = ({
       {
         itemsList.map((e, index) => (
           <FeaturesEmployerRectangle key={index}>
-            <Rectangle
-              data-test='featuresEmployerRectangle'
+            <RectangleItem
+              data-test='featuresEmployerRectangleItem'
               description={e.description}
               icon={e.icon}
             />

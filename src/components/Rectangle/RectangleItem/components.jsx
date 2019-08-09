@@ -4,9 +4,9 @@ import {
   BlueLightColor,
   PurpleLightColor,
   WhiteColor
-} from '../../assets/styles/colors'
+} from '../../../assets/styles/colors'
 
-export const RectangleContainer = styled.div`
+export const RectangleItemContainer = styled.div`
   background-color: ${WhiteColor};
   border-radius: 20px;
   border-top: solid 20px ${BlueLightColor};
@@ -17,9 +17,9 @@ export const RectangleContainer = styled.div`
   text-align: left;
 `
 
-export const RectangleIcon = styled.div``
+export const RectangleItemIcon = styled.div``
 
-export const RectangleDescription = styled.div`
+export const RectangleItemDescription = styled.div`
   color: ${PurpleLightColor};
   margin: 30px 0 0;
 `

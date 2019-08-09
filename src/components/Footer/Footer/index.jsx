@@ -11,14 +11,14 @@ import {
   FooterSocialMediaContent
 } from './components'
 
-import FooterMenu from '../../../components/FooterMenu'
-import SocialList from '../../../components/SocialMedia/SocialList'
+import FooterMenu from '../FooterMenu'
+import SocialList from '../../SocialMedia/SocialList'
 
 const Footer = ({
-  icon,
   linksListCenter,
   linksListLeft,
   linksListRight,
+  logo,
   socialItemsList,
   titleCenter,
   titleLeft,
@@ -28,7 +28,7 @@ const Footer = ({
     <FooterLeft>
       <FooterSocialMedia>
         <FooterLogo data-test='footerLogo'>
-          {icon}
+          {logo}
         </FooterLogo>
 
         <FooterSocialMediaContent>
@@ -65,7 +65,6 @@ const Footer = ({
 export default Footer
 
 Footer.propTypes = {
-  icon: PropTypes.string,
   linksListCenter: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string,
@@ -84,6 +83,7 @@ Footer.propTypes = {
       label: PropTypes.string
     })
   ),
+  logo: PropTypes.string,
   socialItemsList: PropTypes.arrayOf(
     PropTypes.shape({
       bgColor: PropTypes.string,

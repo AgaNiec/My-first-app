@@ -9,22 +9,22 @@ describe('Footer', () => {
   const FOOTER_MENU_LEFT = '[data-test="footerMenuLeft"]'
   const FOOTER_MENU_RIGHT = '[data-test="footerMenuRight"]'
   const FOOTER_SOCIAL_LIST = '[data-test="footerSocialList"]'
-  const icon = 'Custom Icon'
   const linksListCenter = []
   const linksListLeft = []
   const linksListRight = []
+  const logo = 'Custom Logo'
   const socialItemsList = []
   const titleCenter = ''
   const titleLeft = ''
   const titleRight = ''
 
   describe('Logic', () => {
-    it('Should pass proper icon property', () => {
+    it('Should pass proper logo property', () => {
       const wrapper = shallow(
-        <Footer icon={icon} />
+        <Footer logo={logo} />
       )
 
-      expect(wrapper.find(FOOTER_LOGO).text()).toEqual(icon)
+      expect(wrapper.find(FOOTER_LOGO).text()).toEqual(logo)
     })
 
     describe('LinksList', () => {

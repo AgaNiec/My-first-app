@@ -10,8 +10,8 @@ import {
   HeaderLinkButton
 } from './components'
 
-import Button from '../../../components/Button'
-import { H4 } from '../../../components/Typography/components'
+import Button from '../Button'
+import { H4 } from '../Typography/components'
 
 const Header = ({
   buttonId,

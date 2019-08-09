@@ -4,9 +4,9 @@ import {
   PurpleDarkColor,
   PurpleLightColor,
   WhiteColor
-} from '../../assets/styles/colors'
+} from '../../../assets/styles/colors'
 
-export const CardContainer = styled.div`
+export const CardItemContainer = styled.div`
   background-color: ${WhiteColor};
   border-radius: 10px;
   box-shadow: 0 5px 25px 0 rgba(217, 209, 255, 0.3);
@@ -20,20 +20,20 @@ export const CardContainer = styled.div`
   }
 `
 
-export const CardIcon = styled.div`
+export const CardItemIcon = styled.div`
   padding: 80px 50px;
 `
 
-export const CardContent = styled.div`
+export const CardItemContent = styled.div`
   text-align: left;
 `
 
-export const CardTitle = styled.div`
+export const CardItemTitle = styled.div`
   color: ${PurpleDarkColor};
   font-weight: 600;
   margin: 0 0 10px;
 `
 
-export const CardDescription = styled.div`
+export const CardItemDescription = styled.div`
   color: ${PurpleLightColor};
 `

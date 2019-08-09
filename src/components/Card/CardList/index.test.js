@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import CardList from '.'
 
 describe('CardList', () => {
-  const CARD = '[data-test="card"]'
+  const CARD_ITEM = '[data-test="cardItem"]'
   const CARD_LIST_ELEMENT = '[data-test="cardListElement"]'
   const itemsList = [
     {
@@ -35,7 +35,7 @@ describe('CardList', () => {
             <CardList itemsList={itemsList} />
           )
 
-          expect(wrapper.find(CARD).prop(propName)).toEqual(expected)
+          expect(wrapper.find(CARD_ITEM).prop(propName)).toEqual(expected)
         })
     })
   })

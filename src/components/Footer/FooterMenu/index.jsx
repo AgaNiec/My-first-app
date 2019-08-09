@@ -12,7 +12,7 @@ import {
 import {
   H4,
   H5
-} from '../Typography/components'
+} from '../../Typography/components'
 
 const FooterMenu = ({
   linksList,
@@ -24,16 +24,18 @@ const FooterMenu = ({
     </FooterMenuTitle>
 
     <FooterMenuListContainer>
-      {linksList.map(({ href, label }, index) => (
-        <FooterMenuLi key={index}>
-          <FooterMenuLink
-            data-test='footerMenuLink'
-            href={href}
-          >
-            <H5 data-test='footerMenuLinksListH5'>{label}</H5>
-          </FooterMenuLink>
-        </FooterMenuLi>
-      ))}
+      {
+        linksList.map(({ href, label }, index) => (
+          <FooterMenuLi key={index}>
+            <FooterMenuLink
+              data-test='footerMenuLink'
+              href={href}
+            >
+              <H5 data-test='footerMenuLinksListH5'>{label}</H5>
+            </FooterMenuLink>
+          </FooterMenuLi>
+        ))
+      }
     </FooterMenuListContainer>
   </FooterMenuContainer>
 )

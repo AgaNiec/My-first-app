@@ -5,7 +5,7 @@ import FeaturesEmployer from '.'
 
 describe('FeaturesEmployer', () => {
   const FEATURES_EMPLOYER_BUTTON = '[data-test="featuresEmployerButton"]'
-  const FEATURES_EMPLOYER_RECTANGLE = '[data-test="featuresEmployerRectangle"]'
+  const FEATURES_EMPLOYER_RECTANGLE_ITEM = '[data-test="featuresEmployerRectangleItem"]'
   const FEATURES_EMPLOYER_SECTION = '[data-test="featuresEmployerSection"]'
   const description = 'Custom Description'
   const id = 0
@@ -28,14 +28,14 @@ describe('FeaturesEmployer', () => {
         <FeaturesEmployer {...defaultProps} />
       )
 
-      expect(wrapper.find(FEATURES_EMPLOYER_RECTANGLE).exists()).toBeFalsy()
+      expect(wrapper.find(FEATURES_EMPLOYER_RECTANGLE_ITEM).exists()).toBeFalsy()
     })
 
     describe('Props', () => {
       test.each([
         ['description', { description: description }, FEATURES_EMPLOYER_SECTION, description],
-        ['description', { itemsList: itemsList }, FEATURES_EMPLOYER_RECTANGLE, itemsList[0].description],
-        ['icon', { itemsList: itemsList }, FEATURES_EMPLOYER_RECTANGLE, itemsList[0].icon],
+        ['description', { itemsList: itemsList }, FEATURES_EMPLOYER_RECTANGLE_ITEM, itemsList[0].description],
+        ['icon', { itemsList: itemsList }, FEATURES_EMPLOYER_RECTANGLE_ITEM, itemsList[0].icon],
         ['id', { id: id }, FEATURES_EMPLOYER_BUTTON, id],
         ['label', { label: label }, FEATURES_EMPLOYER_BUTTON, label],
         ['onClick', { onClick: onClickSpy }, FEATURES_EMPLOYER_BUTTON, onClickSpy],

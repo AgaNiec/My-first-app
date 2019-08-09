@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {
   PurpleDarkColor,
   PurpleLightColor
-} from '../../assets/styles/colors'
+} from '../../../assets/styles/colors'
 
 export const FooterMenuContainer = styled.div`
   text-align: left;

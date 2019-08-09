@@ -6,7 +6,7 @@ import {
   CardListElement
 } from './components'
 
-import Card from '../../../components/Card'
+import CardItem from '../CardItem'
 
 const CardList = ({
   itemsList
@@ -18,8 +18,8 @@ const CardList = ({
           data-test='cardListElement'
           key={index}
         >
-          <Card
-            data-test='card'
+          <CardItem
+            data-test='cardItem'
             description={e.description}
             icon={e.icon}
             title={e.title}
