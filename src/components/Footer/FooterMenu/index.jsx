@@ -3,16 +3,11 @@ import PropTypes from 'prop-types'
 
 import {
   FooterMenuContainer,
-  FooterMenuLi,
-  FooterMenuLink,
-  FooterMenuTitle,
-  FooterMenuListContainer
+  FooterMenuTitle
 } from './components'
 
-import {
-  H4,
-  H5
-} from '../../Typography/components'
+import FooterMenuList from '../FooterMenuList'
+import { H4 } from '../../Typography/components'
 
 const FooterMenu = ({
   linksList,
@@ -23,20 +18,11 @@ const FooterMenu = ({
       <H4 data-test='footerMenuTitleH4'>{title}</H4>
     </FooterMenuTitle>
 
-    <FooterMenuListContainer>
-      {
-        linksList.map(({ href, label }, index) => (
-          <FooterMenuLi key={index}>
-            <FooterMenuLink
-              data-test='footerMenuLink'
-              href={href}
-            >
-              <H5 data-test='footerMenuLinksListH5'>{label}</H5>
-            </FooterMenuLink>
-          </FooterMenuLi>
-        ))
-      }
-    </FooterMenuListContainer>
+    <FooterMenuList
+      data-test='footerMenuList'
+      linksList={linksList}
+    />
+
   </FooterMenuContainer>
 )
 
@@ -50,13 +36,4 @@ FooterMenu.propTypes = {
     })
   ),
   title: PropTypes.string
-}
-
-FooterMenu.defaultProps = {
-  linksList: [
-    {
-      href: '',
-      label: ''
-    }
-  ]
 }
