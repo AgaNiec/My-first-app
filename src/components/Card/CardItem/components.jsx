@@ -12,7 +12,7 @@ export const CardItemContainer = styled.div`
   box-shadow: 0 5px 25px 0 rgba(217, 209, 255, 0.3);
   cursor: pointer;
   display: flex;
-  max-width: 460px;
+  max-width: 800px;
   padding: 30px 80px 30px 0;
   
   &:hover {

@@ -12,6 +12,7 @@ import {
 } from './components'
 
 import FooterMenu from '../FooterMenu'
+import InnerWrapper from '../../InnerWrapper'
 import SocialList from '../../SocialMedia/SocialList'
 
 const Footer = ({
@@ -24,65 +25,59 @@ const Footer = ({
   titleLeft,
   titleRight
 }) => (
-  <FooterConteiner>
-    <FooterLeft>
-      <FooterSocialMedia>
-        <FooterLogo data-test='footerLogo'>
-          {logo}
-        </FooterLogo>
+  <InnerWrapper>
+    <FooterConteiner>
+      <FooterLeft>
+        <FooterSocialMedia>
+          <FooterLogo data-test='footerLogo'>
+            {logo}
+          </FooterLogo>
 
-        <FooterSocialMediaContent>
-          <SocialList
-            data-test='footerSocialList'
-            itemsList={socialItemsList}
+          <FooterSocialMediaContent>
+            <SocialList
+              data-test='footerSocialList'
+              itemsList={socialItemsList}
+            />
+          </FooterSocialMediaContent>
+        </FooterSocialMedia>
+      </FooterLeft>
+
+      <FooterRight>
+        <FooterMenuContainer>
+          <FooterMenu
+            data-test='footerMenuLeft'
+            linksList={linksListLeft}
+            title={titleLeft}
           />
-        </FooterSocialMediaContent>
-      </FooterSocialMedia>
-    </FooterLeft>
-
-    <FooterRight>
-      <FooterMenuContainer>
-        <FooterMenu
-          data-test='footerMenuLeft'
-          linksList={linksListLeft}
-          title={titleLeft}
-        />
-        <FooterMenu
-          data-test='footerMenuCenter'
-          linksList={linksListCenter}
-          title={titleCenter}
-        />
-        <FooterMenu
-          data-test='footerMenuRight'
-          linksList={linksListRight}
-          title={titleRight}
-        />
-      </FooterMenuContainer>
-    </FooterRight>
-  </FooterConteiner>
+          <FooterMenu
+            data-test='footerMenuCenter'
+            linksList={linksListCenter}
+            title={titleCenter}
+          />
+          <FooterMenu
+            data-test='footerMenuRight'
+            linksList={linksListRight}
+            title={titleRight}
+          />
+        </FooterMenuContainer>
+      </FooterRight>
+    </FooterConteiner>
+  </InnerWrapper>
 )
 
 export default Footer
 
+const linksListPropTypes = PropTypes.arrayOf(
+  PropTypes.shape({
+    href: PropTypes.string,
+    label: PropTypes.string
+  })
+)
+
 Footer.propTypes = {
-  linksListCenter: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string,
-      label: PropTypes.string
-    })
-  ),
-  linksListLeft: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string,
-      label: PropTypes.string
-    })
-  ),
-  linksListRight: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string,
-      label: PropTypes.string
-    })
-  ),
+  linksListCenter: linksListPropTypes,
+  linksListLeft: linksListPropTypes,
+  linksListRight: linksListPropTypes,
   logo: PropTypes.string,
   socialItemsList: PropTypes.arrayOf(
     PropTypes.shape({

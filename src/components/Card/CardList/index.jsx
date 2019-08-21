@@ -13,16 +13,16 @@ const CardList = ({
 }) => (
   <CardListContainer>
     {
-      itemsList.map((e, index) => (
+      itemsList.map(({ description, icon, title }, index) => (
         <CardListElement
           data-test='cardListElement'
           key={index}
         >
           <CardItem
             data-test='cardItem'
-            description={e.description}
-            icon={e.icon}
-            title={e.title}
+            description={description}
+            icon={icon}
+            title={title}
           />
         </CardListElement>
       ))

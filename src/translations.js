@@ -83,7 +83,6 @@ export const translations = {
   },
 
   footer: {
-    icon: 'LOGO',
     socialItemsList: [
       {
         bgColor: FbColor,
@@ -176,12 +175,26 @@ export const translations = {
   },
 
   header: {
-    href: 'google.pl',
-    icon: 'LOGO',
-    id: '1',
-    label: 'Zdobądź bilet',
-    onClick: () => null,
-    text: 'Zaloguj się'
+    linkHref: '/login',
+    logo: 'LOGO',
+    buttonId: '1',
+    buttonLabel: 'Zdobądź bilet',
+    buttonOnClick: () => null,
+    linkLabel: 'Zaloguj się',
+    linksList: [
+      {
+        href: '/prelekcje-i-szkolenia',
+        label: 'Prelekcje i szkolenia'
+      },
+      {
+        href: '/pracodawcy',
+        label: 'Pracodawcy'
+      },
+      {
+        href: '/strefy',
+        label: 'Strefy'
+      }
+    ]
   },
 
   homepageSectionOne: {

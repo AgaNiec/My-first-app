@@ -7,7 +7,13 @@ import {
 } from '../../assets/styles/colors'
 
 export const SectionContainer = styled.div`
-  text-align: left;
+  ${props => {
+    switch (props.align) {
+      case 'center': return 'text-align: center;'
+      case 'left': return 'text-align: left;'
+      default: return ''
+    }
+  }}
 `
 
 export const SectionTitle = styled.div`

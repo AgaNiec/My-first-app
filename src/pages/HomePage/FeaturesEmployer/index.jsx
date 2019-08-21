@@ -45,12 +45,12 @@ const FeaturesEmployer = ({
 
     <FeaturesEmployerRight>
       {
-        itemsList.map((e, index) => (
+        itemsList.map(({ description, icon }, index) => (
           <FeaturesEmployerRectangle key={index}>
             <RectangleItem
               data-test='featuresEmployerRectangleItem'
-              description={e.description}
-              icon={e.icon}
+              description={description}
+              icon={icon}
             />
           </FeaturesEmployerRectangle>
         ))

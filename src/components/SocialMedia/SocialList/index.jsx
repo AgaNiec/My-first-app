@@ -13,14 +13,14 @@ const SocialList = ({
 }) => (
   <SocialListContainer>
     {
-      itemsList.map((e, index) => (
+      itemsList.map(({ bgColor, href, icon, label }, index) => (
         <SocialListElement key={index}>
           <SocialItem
-            bgColor={e.bgColor}
+            bgColor={bgColor}
             data-test='socialListSocialItem'
-            href={e.href}
-            icon={e.icon}
-            label={e.label}
+            href={href}
+            icon={icon}
+            label={label}
           />
         </SocialListElement>
       ))

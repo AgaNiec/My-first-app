@@ -4,23 +4,49 @@ import { shallow } from 'enzyme'
 import Section from '.'
 
 describe('Section', () => {
+  const SECTION_CONTAINER = '[data-test="sectionContainer"]'
   const SECTION_DESCRIPTION = '[data-test="sectionDescriptionH3"]'
   const SECTION_TITLE = '[data-test="sectionTitleH1"]'
   const description = 'Custom Description'
   const title = 'Custom Title'
 
   describe('Logic', () => {
-    test.each([
-      ['description', { description: description }, SECTION_DESCRIPTION, description],
-      ['title', { title: title }, SECTION_TITLE, title]
-    ])('Should pass proper %s',
-      (_, props, selector, expected) => {
-        const wrapper = shallow(
-          <Section {...props} />
-        )
+    it('Should render default component', () => {
+      const wrapper = shallow(
+        <Section />
+      )
 
-        expect(wrapper.find(selector).text()).toEqual(expected)
-      }
-    )
+      expect(wrapper.find(SECTION_CONTAINER).prop('align')).toEqual('left')
+    })
+
+    describe('Align', () => {
+      test.each([
+        ['center'],
+        ['left']
+      ])(
+        'Should render proper component when align is set to %s',
+        (propName) => {
+          const wrapper = shallow(
+            <Section align={propName} />
+          )
+
+          expect(wrapper.find(SECTION_CONTAINER).prop('align')).toEqual(propName)
+        })
+    })
+
+    describe('Props', () => {
+      test.each([
+        ['description', { description: description }, SECTION_DESCRIPTION, description],
+        ['title', { title: title }, SECTION_TITLE, title]
+      ])(
+        'Should pass proper %s',
+        (_, props, selector, expected) => {
+          const wrapper = shallow(
+            <Section {...props} />
+          )
+
+          expect(wrapper.find(selector).text()).toEqual(expected)
+        })
+    })
   })
 })

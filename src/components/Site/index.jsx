@@ -18,6 +18,7 @@ const Site = ({
   children,
   linkHref,
   linkLabel,
+  linksList,
   linksListCenter,
   linksListLeft,
   linksListRight,
@@ -36,6 +37,7 @@ const Site = ({
         data-test='siteHeaderContainer'
         linkHref={linkHref}
         linkLabel={linkLabel}
+        linksList={linksList}
         logo={logo}
       />
     </SiteHeaderContainer>
@@ -62,6 +64,13 @@ const Site = ({
 
 export default Site
 
+const linksListPropTypes = PropTypes.arrayOf(
+  PropTypes.shape({
+    href: PropTypes.string,
+    label: PropTypes.string
+  })
+)
+
 Site.propTypes = {
   buttonId: PropTypes.oneOfType([
     PropTypes.number,
@@ -73,24 +82,9 @@ Site.propTypes = {
   linkHref: PropTypes.string,
   logo: PropTypes.string,
   linkLabel: PropTypes.string,
-  linksListCenter: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string,
-      label: PropTypes.string
-    })
-  ),
-  linksListLeft: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string,
-      label: PropTypes.string
-    })
-  ),
-  linksListRight: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string,
-      label: PropTypes.string
-    })
-  ),
+  linksListCenter: linksListPropTypes,
+  linksListLeft: linksListPropTypes,
+  linksListRight: linksListPropTypes,
   socialItemsList: PropTypes.arrayOf(
     PropTypes.shape({
       bgColor: PropTypes.string,
