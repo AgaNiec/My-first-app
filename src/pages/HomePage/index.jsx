@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { HomepageContainer } from './components'
-import { translations } from '../../translations'
+import { HomepageSpacer } from './components'
 
 import Banner from '../../components/Banner'
 import CardList from '../../components/Card/CardList'
@@ -9,10 +8,30 @@ import CreatorCv from './CreatorCv'
 import FeaturesEmployer from './FeaturesEmployer'
 import HomepageSectionOne from './HomepageSectionOne'
 import InnerWrapper from '../../components/InnerWrapper'
+import Site from '../../components/Site'
+
+import { translations } from '../../translations'
 
 const Homepage = () => (
-  <HomepageContainer>
+  <Site
+    buttonId={translations.header.buttonId}
+    buttonLabel={translations.header.buttonLabel}
+    buttonOnClick={translations.header.buttonOnClick}
+    linkHref={translations.header.linkHref}
+    linkLabel={translations.header.linkLabel}
+    linksListCenter={translations.footer.menuCenter.linksList}
+    linksListLeft={translations.footer.menuLeft.linksList}
+    linksListRight={translations.footer.menuRight.linksList}
+    logo={translations.header.logo}
+    socialItemsList={translations.footer.socialItemsList}
+    titleCenter={translations.footer.menuCenter.title}
+    titleLeft={translations.footer.menuLeft.title}
+    titleRight={translations.footer.menuRight.title}
+    linksList={translations.header.linksList}
+  >
     <InnerWrapper>
+      <HomepageSpacer />
+
       <HomepageSectionOne
         description={translations.homepageSectionOne.description}
         icon={translations.homepageSectionOne.icon}
@@ -22,7 +41,11 @@ const Homepage = () => (
         title={translations.homepageSectionOne.title}
       />
 
+      <HomepageSpacer />
+
       <CardList itemsList={translations.cardList.itemsList} />
+
+      <HomepageSpacer />
 
       <CreatorCv
         description={translations.creatorCv.description}
@@ -33,6 +56,8 @@ const Homepage = () => (
         title={translations.creatorCv.title}
       />
 
+      <HomepageSpacer />
+
       <FeaturesEmployer
         description={translations.featuresEmployer.description}
         itemsList={translations.featuresEmployer.itemsList}
@@ -41,6 +66,8 @@ const Homepage = () => (
         title={translations.featuresEmployer.title}
       />
 
+      <HomepageSpacer />
+
       <Banner
         description={translations.banner.description}
         id={translations.banner.id}
@@ -48,7 +75,7 @@ const Homepage = () => (
         title={translations.banner.title}
       />
     </InnerWrapper>
-  </HomepageContainer>
+  </Site>
 )
 
 export default Homepage

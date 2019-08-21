@@ -24,6 +24,7 @@ const CreatorCv = ({
   <CreatorCvContainer>
     <CreatorCvSection>
       <Section
+        align='center'
         data-test='creatorCvSection'
         description={description}
         title={title}
@@ -32,13 +33,13 @@ const CreatorCv = ({
 
     <CreatorCvStepContainer>
       {
-        itemsList.map((e, index) => (
+        itemsList.map(({ description, number, title }, index) => (
           <StepElement key={index}>
             <Step
               data-test='stepContainer'
-              description={e.description}
-              number={e.number}
-              title={e.title}
+              description={description}
+              number={number}
+              title={title}
             />
           </StepElement>
         ))
