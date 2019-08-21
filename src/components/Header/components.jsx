@@ -6,10 +6,12 @@ export const HeaderContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 40px 80px;
+  padding: 20px 0;
 `
 
 export const HeaderLogo = styled.div``
+
+export const HeaderMenuList = styled.div``
 
 export const HeaderLinkButton = styled.div`
   align-items: center;

@@ -8,11 +8,13 @@ describe('Header', () => {
   const HEADER_LINK = '[data-test="headerLink"]'
   const HEADER_LINK_H4 = '[data-test="headerLinkH4"]'
   const HEADER_LOGO = '[data-test="headerLogo"]'
+  const MENU_LIST = '[data-test="menuList"]'
   const buttonId = 0
   const buttonLabel = 'Custom Button Label'
   const buttonOnClickSpy = jest.fn()
   const linkHref = 'Custom Link Href'
   const linkLabel = 'Custom Link Label'
+  const linksList = []
   const logo = 'Custom Logo'
   const defaultProps = {
     buttonId: buttonId
@@ -39,7 +41,8 @@ describe('Header', () => {
         ['buttonId', 'id', { buttonId: buttonId }, HEADER_BUTTON, buttonId],
         ['buttonLabel', 'label', { buttonLabel: buttonLabel }, HEADER_BUTTON, buttonLabel],
         ['buttonOnClick', 'onClick', { buttonOnClick: buttonOnClickSpy }, HEADER_BUTTON, buttonOnClickSpy],
-        ['linkHref', 'href', { linkHref: linkHref }, HEADER_LINK, linkHref]
+        ['linkHref', 'href', { linkHref: linkHref }, HEADER_LINK, linkHref],
+        ['linksList', 'linksList', { linksList: linksList }, MENU_LIST, linksList]
       ])(
         'Should pass proper %s property',
         (_, propName, props, selector, expected) => {

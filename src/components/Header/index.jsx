@@ -5,13 +5,16 @@ import {
   HeaderButton,
   HeaderContainer,
   HeaderLink,
+  HeaderLinkButton,
   HeaderLinkContainer,
   HeaderLogo,
-  HeaderLinkButton
+  HeaderMenuList
 } from './components'
 
-import Button from '../Button'
 import { H4 } from '../Typography/components'
+import Button from '../Button'
+import InnerWrapper from '../InnerWrapper'
+import MenuList from '../MenuList'
 
 const Header = ({
   buttonId,
@@ -19,35 +22,46 @@ const Header = ({
   buttonOnClick,
   linkHref,
   linkLabel,
+  linksList,
   logo
 }) => (
-  <HeaderContainer>
-    <HeaderLogo data-test='headerLogo'>
-      {logo}
-    </HeaderLogo>
+  <InnerWrapper>
+    <HeaderContainer>
+      <HeaderLogo data-test='headerLogo'>
+        {logo}
+      </HeaderLogo>
 
-    <HeaderLinkButton>
-      <HeaderLinkContainer>
-        <HeaderLink
-          data-test='headerLink'
-          href={linkHref}
-        >
-          <H4 data-test='headerLinkH4'>
-            {linkLabel}
-          </H4>
-        </HeaderLink>
-      </HeaderLinkContainer>
-
-      <HeaderButton >
-        <Button
-          data-test='headerButton'
-          id={buttonId}
-          label={buttonLabel}
-          onClick={buttonOnClick}
+      <HeaderMenuList>
+        <MenuList
+          as='header'
+          data-test='menuList'
+          linksList={linksList}
         />
-      </HeaderButton>
-    </HeaderLinkButton>
-  </HeaderContainer>
+      </HeaderMenuList>
+
+      <HeaderLinkButton>
+        <HeaderLinkContainer>
+          <HeaderLink
+            data-test='headerLink'
+            href={linkHref}
+          >
+            <H4 data-test='headerLinkH4'>
+              {linkLabel}
+            </H4>
+          </HeaderLink>
+        </HeaderLinkContainer>
+
+        <HeaderButton >
+          <Button
+            data-test='headerButton'
+            id={buttonId}
+            label={buttonLabel}
+            onClick={buttonOnClick}
+          />
+        </HeaderButton>
+      </HeaderLinkButton>
+    </HeaderContainer>
+  </InnerWrapper>
 )
 
 export default Header
@@ -61,5 +75,11 @@ Header.propTypes = {
   buttonOnClick: PropTypes.func,
   linkHref: PropTypes.string,
   linkLabel: PropTypes.string,
+  linksList: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string,
+      label: PropTypes.string
+    })
+  ),
   logo: PropTypes.string
 }
