@@ -23,36 +23,36 @@ describe('MenuList', () => {
       )
 
       expect(wrapper.find(MENU_LI).exists()).toBeFalsy()
-      expect(wrapper.find(MENU_LIST_CONTAINER).prop('as')).toEqual('footer')
+      expect(wrapper.find(MENU_LIST_CONTAINER).prop('position')).toEqual('footer')
     })
 
     test.each([
       ['header'],
       ['footer']
     ])(
-      'Should pass proper as property when as is set to %s and linksList passed',
+      'Should pass proper position property when position is set to %s and linksList passed',
       (propName) => {
         const wrapper = shallow(
           <MenuList
-            as={propName}
             linksList={linksList}
+            position={propName}
           />
         )
 
-        expect(wrapper.find(MENU_LIST_CONTAINER).prop('as')).toEqual(propName)
-        expect(wrapper.find(MENU_LI).prop('as')).toEqual(propName)
+        expect(wrapper.find(MENU_LIST_CONTAINER).prop('position')).toEqual(propName)
+        expect(wrapper.find(MENU_LI).prop('position')).toEqual(propName)
       })
 
     test.each([
       ['header', 'flex', '0 25px 0 0'],
       ['footer', 'inline', '0 0 15px']
     ])(
-      'Should render proper component design when property as is set to %s and linksList passed',
+      'Should render proper component design when property position is set to %s and linksList passed',
       (propName, display, margin) => {
         const wrapper = mount(
           <MenuList
-            as={propName}
             linksList={linksList}
+            position={propName}
           />
         )
 

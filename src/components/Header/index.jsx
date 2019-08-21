@@ -33,9 +33,9 @@ const Header = ({
 
       <HeaderMenuList>
         <MenuList
-          as='header'
           data-test='menuList'
           linksList={linksList}
+          position='header'
         />
       </HeaderMenuList>
 

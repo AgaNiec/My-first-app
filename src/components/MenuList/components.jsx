@@ -4,7 +4,7 @@ import { PurpleLightColor } from '../../assets/styles/colors'
 
 export const MenuListContainer = styled.ul`
   ${props => {
-    switch (props.as) {
+    switch (props.position) {
       case 'footer': return 'display: inline;'
       case 'header': return 'display: flex;'
       default: return ``
@@ -14,7 +14,7 @@ export const MenuListContainer = styled.ul`
 
 export const MenuLi = styled.li`
   ${props => {
-    switch (props.as) {
+    switch (props.position) {
       case 'footer': return 'margin: 0 0 15px;'
       case 'header': return 'margin: 0 25px 0 0;'
       default: return ``

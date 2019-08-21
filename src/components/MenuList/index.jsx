@@ -10,19 +10,19 @@ import {
 import { H5 } from '../Typography/components'
 
 const MenuList = ({
-  as,
-  linksList
+  linksList,
+  position
 }) => (
   <MenuListContainer
-    as={as}
     data-test='menuListContainer'
+    position={position}
   >
     {
       linksList.map(({ href, label }, index) => (
         <MenuLi
-          as={as}
           data-test='menuLi'
           key={index}
+          position={position}
         >
           <MenuLink
             data-test='menuLink'
@@ -39,19 +39,19 @@ const MenuList = ({
 export default MenuList
 
 MenuList.propType = {
-  as: PropTypes.oneOf([
-    'footer',
-    'header'
-  ]),
   linksList: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string,
       label: PropTypes.string
     })
-  )
+  ),
+  position: PropTypes.oneOf([
+    'footer',
+    'header'
+  ])
 }
 
 MenuList.defaultProps = {
-  as: 'footer',
+  position: 'footer',
   linksList: []
 }
