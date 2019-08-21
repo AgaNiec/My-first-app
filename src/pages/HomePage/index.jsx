@@ -30,8 +30,6 @@ const Homepage = () => (
     linksList={translations.header.linksList}
   >
     <InnerWrapper>
-      <HomepageSpacer />
-
       <HomepageSectionOne
         description={translations.homepageSectionOne.description}
         icon={translations.homepageSectionOne.icon}

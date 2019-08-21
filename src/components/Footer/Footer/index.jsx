@@ -2,13 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {
-  FooterConteiner,
+  FooterContainer,
   FooterLeft,
   FooterLogo,
-  FooterMenuContainer,
-  FooterRight,
-  FooterSocialMedia,
-  FooterSocialMediaContent
+  FooterRight
 } from './components'
 
 import FooterMenu from '../FooterMenu'
@@ -26,42 +23,36 @@ const Footer = ({
   titleRight
 }) => (
   <InnerWrapper>
-    <FooterConteiner>
+    <FooterContainer>
       <FooterLeft>
-        <FooterSocialMedia>
-          <FooterLogo data-test='footerLogo'>
-            {logo}
-          </FooterLogo>
+        <FooterLogo data-test='footerLogo'>
+          {logo}
+        </FooterLogo>
 
-          <FooterSocialMediaContent>
-            <SocialList
-              data-test='footerSocialList'
-              itemsList={socialItemsList}
-            />
-          </FooterSocialMediaContent>
-        </FooterSocialMedia>
+        <SocialList
+          data-test='footerSocialList'
+          itemsList={socialItemsList}
+        />
       </FooterLeft>
 
       <FooterRight>
-        <FooterMenuContainer>
-          <FooterMenu
-            data-test='footerMenuLeft'
-            linksList={linksListLeft}
-            title={titleLeft}
-          />
-          <FooterMenu
-            data-test='footerMenuCenter'
-            linksList={linksListCenter}
-            title={titleCenter}
-          />
-          <FooterMenu
-            data-test='footerMenuRight'
-            linksList={linksListRight}
-            title={titleRight}
-          />
-        </FooterMenuContainer>
+        <FooterMenu
+          data-test='footerMenuLeft'
+          linksList={linksListLeft}
+          title={titleLeft}
+        />
+        <FooterMenu
+          data-test='footerMenuCenter'
+          linksList={linksListCenter}
+          title={titleCenter}
+        />
+        <FooterMenu
+          data-test='footerMenuRight'
+          linksList={linksListRight}
+          title={titleRight}
+        />
       </FooterRight>
-    </FooterConteiner>
+    </FooterContainer>
   </InnerWrapper>
 )
 

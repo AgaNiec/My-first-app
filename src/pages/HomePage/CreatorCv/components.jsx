@@ -1,21 +1,23 @@
 import styled from 'styled-components'
 
-export const CreatorCvContainer = styled.div`
-  margin: 150px 0 0;
-`
-
-export const CreatorCvSection = styled.div`
-  display: flex;
-  justify-content: center;
-`
+export const CreatorCvContainer = styled.div``
 
 export const CreatorCvStepContainer = styled.div`
-  display:flex;
   margin: 100px 0 0;
+
+  @media (min-width: 992px) {
+    display: flex;
+  }
 `
 
-export const StepElement = styled.div``
+export const StepElement = styled.div`
+  @media (max-width: 991px) {
+    display: flex;
+    justify-content: center;
+  }
+`
 
 export const CreatorCvButton = styled.div`
   margin: 100px 0 0;
+  text-align: center;
 `

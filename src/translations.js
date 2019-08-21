@@ -69,7 +69,8 @@ export const translations = {
         icon: 'icon'
       },
       {
-        description: 'Mamy takich Pracodawców!'
+        description: 'Mamy takich Pracodawców!',
+        icon: 'icon'
       },
       {
         description: 'Preferujesz pracę zdalną i dużą dozę zaufania?',

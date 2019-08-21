@@ -9,15 +9,23 @@ import {
 export const BannerContainer = styled.div`
   background-color: ${PurpleDarkColor};
   border-radius: 20px;
-  display: flex;
   padding: 40px 60px;
+
+  @media (min-width: 992px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 export const BannerContent = styled.div`
-  flex: 5;
-  max-width: 600px;
-  padding: 0 30px 0 0;
-  text-align: left;
+  @media (min-width: 992px) {
+    max-width: 600px;
+    text-align: left;
+  }
+
+  @media (max-width: 991px) {
+    text-align: center;
+  }
 `
 
 export const BannerTitle = styled.div`
@@ -30,8 +38,15 @@ export const BannerDescription = styled.div`
 `
 
 export const BannerButton = styled.div`
-  align-items: center;
   display: flex;
-  flex: 1;
-  justify-content: end;
+
+  @media (min-width: 992px) {
+    align-items: center;
+    margin: 0 0 0 30px;
+  }
+
+  @media (max-width: 991px) {
+    justify-content: center;
+    margin: 40px 0 0;
+  }
 `

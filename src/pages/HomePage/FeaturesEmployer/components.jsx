@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 
 export const FeaturesEmployerContainer = styled.div`
-  display: flex;
+  @media (min-width: 1200px) {
+    display: flex;
+  }
 `
 
 export const FeaturesEmployerLeft = styled.div`
-  flex: 1;
-  padding: 20px 100px 0 0;
+  @media (min-width: 1200px) {
+    padding: 20px 100px 0 0;
+  }
 `
 
 export const FeaturesEmployerSection = styled.div``
@@ -19,9 +22,28 @@ export const FeaturesEmployerButton = styled.div`
 export const FeaturesEmployerRight = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
+  
+  @media (min-width: 1200px) {
+    min-width: 640px;
+  }
+
+  @media (max-width: 1199px) {
+    justify-content: center;
+    margin: 60px auto 0;
+    max-width: 640px;
+  }
 `
 
 export const FeaturesEmployerRectangle = styled.div`
-  margin: 0 20px 20px 0;
+  margin-bottom: 20px;
+
+  @media (min-width: 1200px) {
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    margin-right: 20px;
+  }
 `

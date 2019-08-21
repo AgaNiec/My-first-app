@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import {
   CreatorCvButton,
   CreatorCvContainer,
-  CreatorCvSection,
   CreatorCvStepContainer,
   StepElement
 } from './components'
@@ -22,14 +21,12 @@ const CreatorCv = ({
   title
 }) => (
   <CreatorCvContainer>
-    <CreatorCvSection>
-      <Section
-        align='center'
-        data-test='creatorCvSection'
-        description={description}
-        title={title}
-      />
-    </CreatorCvSection>
+    <Section
+      align='center'
+      data-test='creatorCvSection'
+      description={description}
+      title={title}
+    />
 
     <CreatorCvStepContainer>
       {
