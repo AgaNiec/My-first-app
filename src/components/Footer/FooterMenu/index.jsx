@@ -6,7 +6,7 @@ import {
   FooterMenuTitle
 } from './components'
 
-import FooterMenuList from '../FooterMenuList'
+import MenuList from '../../MenuList'
 import { H4 } from '../../Typography/components'
 
 const FooterMenu = ({
@@ -18,8 +18,8 @@ const FooterMenu = ({
       <H4 data-test='footerMenuTitleH4'>{title}</H4>
     </FooterMenuTitle>
 
-    <FooterMenuList
-      data-test='footerMenuList'
+    <MenuList
+      data-test='menuList'
       linksList={linksList}
     />
 
