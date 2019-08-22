@@ -69,7 +69,7 @@ export const translations = {
         icon: 'icon'
       },
       {
-        description: 'Mamy takich Pracodawców!',
+        description: 'Mamy takich Pracodawców! Sprawdź to sam.',
         icon: 'icon'
       },
       {

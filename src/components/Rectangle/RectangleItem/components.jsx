@@ -13,11 +13,22 @@ export const RectangleItemContainer = styled.div`
   box-shadow: 0 10px 50px 0 rgba(217, 209, 255, 0.3);
   height: 100%;
   max-width: 300px;
-  padding: 30px;
   text-align: left;
+
+  @media (min-width: 480px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 479px) {
+    padding: 20px;
+  }
 `
 
-export const RectangleItemIcon = styled.div``
+export const RectangleItemIcon = styled.div`
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+`
 
 export const RectangleItemDescription = styled.div`
   color: ${PurpleLightColor};

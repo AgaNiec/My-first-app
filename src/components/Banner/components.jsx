@@ -9,11 +9,23 @@ import {
 export const BannerContainer = styled.div`
   background-color: ${PurpleDarkColor};
   border-radius: 20px;
-  padding: 40px 60px;
 
   @media (min-width: 992px) {
     display: flex;
     justify-content: space-between;
+    padding: 40px 60px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 40px;
+  }
+
+  @media (min-width: 480px) and (max-width: 767px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 479px) {
+    padding: 30px 20px;
   }
 `
 

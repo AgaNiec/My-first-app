@@ -16,7 +16,14 @@ export const FeaturesEmployerSection = styled.div``
 
 export const FeaturesEmployerButton = styled.div`
   margin: 50px 0 0;
-  text-align: left;
+
+  @media (min-width: 992px) {
+    text-align: left;
+  }
+
+  @media (max-width: 991px) {
+    text-align: center;
+  }
 `
 
 export const FeaturesEmployerRight = styled.div`

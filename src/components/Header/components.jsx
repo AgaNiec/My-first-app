@@ -5,13 +5,17 @@ import { PurpleLightColor } from '../../assets/styles/colors'
 export const HeaderContainer = styled.div`
   align-items: center;
   display: flex;
+  height: 100%;
   justify-content: space-between;
-  padding: 20px 0;
 `
 
 export const HeaderLogo = styled.div``
 
-export const HeaderMenuList = styled.div``
+export const HeaderMenuList = styled.div`
+  @media (max-width: 991px) {
+    display: none;
+  }
+`
 
 export const HeaderLinkButton = styled.div`
   align-items: center;

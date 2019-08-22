@@ -15,8 +15,20 @@ export const MenuListContainer = styled.ul`
 export const MenuLi = styled.li`
   ${props => {
     switch (props.position) {
-      case 'footer': return 'margin: 0 0 15px;'
-      case 'header': return 'margin: 0 25px 0 0;'
+      case 'footer': return `
+        margin: 0 0 15px;
+
+        &:last-child {
+          margin: 0;
+        }
+      `
+      case 'header': return `
+        margin: 0 25px 0 0;
+      
+        &:last-child {
+          margin: 0;
+        }
+      `
       default: return ``
     }
   }}

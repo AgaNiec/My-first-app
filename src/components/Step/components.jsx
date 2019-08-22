@@ -8,8 +8,22 @@ import {
 
 export const StepContainer = styled.div`
   display: flex;
-  max-width: 400px;
-  padding: 20px;
+
+  @media (min-width: 992px) {
+    max-width: 400px;
+  }
+
+  @media (max-width: 991px) {
+    max-width: 550px;
+  }
+
+  @media (min-width: 480px) {
+    padding: 20px;
+  }
+  
+  @media (max-width: 479px) {
+    padding: 10px;
+  }
 `
 
 export const StepNumber = styled.div`

@@ -10,7 +10,15 @@ export const SectionContainer = styled.div`
   ${props => {
     switch (props.align) {
       case 'center': return 'text-align: center;'
-      case 'left': return 'text-align: left;'
+      case 'left': return `
+        @media (min-width: 992px) {
+          text-align: left;
+        }
+      
+        @media (max-width: 991px) {
+          text-align: center;
+        }
+      `
       default: return ''
     }
   }}
