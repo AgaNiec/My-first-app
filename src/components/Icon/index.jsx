@@ -1,16 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-import { IconContainer } from './components'
+import { SVG } from './components'
 
-const Icon = ({
-  icon
-}) => (
-  <IconContainer>{icon}</IconContainer>
+const Icon = (props) => (
+  <SVG {...props}>
+    {props.children}
+  </SVG>
 )
 
 export default Icon
-
-Icon.propTypes = {
-  icon: PropTypes.string
-}

@@ -1,20 +1,19 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
+import 'jest-styled-components'
 
 import Icon from '.'
 
-import { IconContainer } from './components'
-
 describe('Icon', () => {
-  const customIcon = 'Custom Icon'
+  const color = 'Custom Color'
 
   describe('Logic', () => {
-    it('Sholuld pass propper icon', () => {
-      const wrapper = shallow(
-        <Icon icon={customIcon} />
+    it('Should pass proper color property', () => {
+      const wrapper = mount(
+        <Icon color={color} />
       )
 
-      expect(wrapper.find(IconContainer).text()).toEqual(customIcon)
+      expect(wrapper).toHaveStyleRule('fill', color)
     })
   })
 })

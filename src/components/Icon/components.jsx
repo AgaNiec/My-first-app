@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const IconContainer = styled.div`
+export const SVG = styled.svg`
   display: inline-block;
-  text-align: center;
+  vertical-align: middle;
+  
+  fill: ${({ color }) => color};
 `
