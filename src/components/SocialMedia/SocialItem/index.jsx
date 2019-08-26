@@ -1,41 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {
-  SocialItemIconContainer,
-  SocialItemLink
-} from './components'
-
-import Icon from '../../Icon'
-import { Small } from '../../Typography/components'
+import { SocialItemLink } from './components'
 
 const SocialItem = ({
+  Icon,
   bgColor,
-  href,
-  icon,
-  label
+  href
 }) => (
   <SocialItemLink
     bgColor={bgColor}
     data-test='SocialItemLink'
     href={href}
   >
-    <SocialItemIconContainer>
-      <Icon
-        data-test='SocialItemIcon'
-        icon={icon}
-      />
-    </SocialItemIconContainer>
-
-    <Small data-test='SocialItemSmall'>{label}</Small>
+    <Icon color='white' />
   </SocialItemLink>
 )
 
 export default SocialItem
 
 SocialItem.propTypes = {
+  Icon: PropTypes.func,
   bgColor: PropTypes.string,
-  href: PropTypes.string,
-  icon: PropTypes.string,
-  label: PropTypes.string
+  href: PropTypes.string
 }

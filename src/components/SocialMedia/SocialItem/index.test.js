@@ -5,20 +5,18 @@ import 'jest-styled-components'
 import SocialItem from '.'
 
 describe('SocialItem', () => {
+  const Icon = () => null
   const SOCIAL_ITEM_ICON = '[data-test="SocialItemIcon"]'
   const SOCIAL_ITEM_LINK = '[data-test="SocialItemLink"]'
-  const SOCIAL_ITEM_SMALL = '[data-test="SocialItemSmall"]'
   const bgColor = 'red'
   const href = 'Custom Href'
-  const icon = 'Custom Icon'
-  const label = 'Custom Label'
 
   describe('Logic', () => {
     describe('Props', () => {
       test.each([
+        ['Icon', { Icon: Icon }, SOCIAL_ITEM_ICON, Icon],
         ['bgColor', { bgColor: bgColor }, SOCIAL_ITEM_LINK, bgColor],
-        ['href', { href: href }, SOCIAL_ITEM_LINK, href],
-        ['icon', { icon: icon }, SOCIAL_ITEM_ICON, icon]
+        ['href', { href: href }, SOCIAL_ITEM_LINK, href]
       ])(
         'Should pass proper %s property',
         (propName, props, selector, expected) => {
@@ -28,14 +26,6 @@ describe('SocialItem', () => {
 
           expect(wrapper.find(selector).prop(propName)).toEqual(expected)
         })
-    })
-
-    it('Should pass proper label property', () => {
-      const wrapper = shallow(
-        <SocialItem label={label} />
-      )
-
-      expect(wrapper.find(SOCIAL_ITEM_SMALL).text()).toEqual(label)
     })
   })
 
