@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
-import { WhiteColor } from '../../assets/styles/colors'
+import {
+  PinkBrighterColor,
+  PinkColor,
+  WhiteColor
+} from '../../assets/styles/colors'
 
 export const ButtonContainer = styled.button`
-  background: linear-gradient(93deg, #fd007a, #e0057b);
+  background: linear-gradient(93deg, ${PinkBrighterColor}, ${PinkColor});
   border-radius: 40px;
   border: none;
   color: ${WhiteColor};

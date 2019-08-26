@@ -1,4 +1,5 @@
 export const BlueLightColor = '#f0f7ff'
+export const PinkBrighterColor = '#fd007a'
 export const PinkColor = '#e0057b'
 export const PlumColor = '#b4a4ff'
 export const PurpleBorder = '#efebff'
