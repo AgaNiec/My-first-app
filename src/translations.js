@@ -5,82 +5,95 @@ import {
   YtColor
 } from './assets/styles/colors'
 
+import BillardIcon from './assets/icons/Billard'
+import CodingIcon from './assets/icons/Coding'
+import ComputerIcon from './assets/icons/Computer'
+import ControllerIcon from './assets/icons/Controller'
+import FacebookIcon from './assets/icons/Facebook'
+import IdeaIcon from './assets/icons/Idea'
+import InstagramIcon from './assets/icons/Instagram'
+import JavaScriptIcon from './assets/icons/JavaScript'
+import LogoImage from './assets/images/logo.png'
+import TwitterIcon from './assets/icons/Twitter'
+import VRIcon from './assets/icons/VR'
+import YoutubeIcon from './assets/icons/Youtube'
+
 export const translations = {
   banner: {
-    description: 'Skorzystaj z naszego kreatora CV. Wybierz jeden  z wielu szablonów i dostosuj go do własnych potrzeb',
+    description: 'Zawsze szukamy firm, organizacji i ludzi, którzy są zaangażowani w społeczność i chcą pomóc nam stworzyć niesamowite i przyjazne wydarzenie.',
     id: '6',
-    label: 'Stwórz CV',
-    title: 'Stwórz swoje niepowtrzalane CV'
+    label: 'Zostań sponsorem',
+    title: 'Zareklamuj swoją firmę'
   },
 
   cardList: {
     itemsList: [
       {
-        description: 'Rekruter potrzebuje tylko 14 sekund, aby odrzucić Twoje CV i 4 minuty, aby je zaakceptować. Spraw, by zainteresował się Twoją osobą i zaprosił do kolejnego etapu rekrutacji!',
-        icon: 'icon',
-        title: 'Stwórz skuteczne CV'
+        description: 'JavaScript przeszedł długą drogę od początków bycia językiem skryptowym. Obecnie praktycznie wszystkie projekty oprogramowania używają JavaScript. Dołącz do naszych ekscytujących sesji i warsztatów na międzynarodowej konferencji Full-Stack, aby przenieść swoje umiejętności JS na wyższy poziom.',
+        icon: JavaScriptIcon,
+        title: 'JavaScript jest wszędzie!'
       },
       {
-        description: 'Dla jednego międzynarodowa firma to zaleta, a dla drugiego wada.  Praca zdalna może być zbawieniem lub udręką. Pokażemy Ci, którzy Pracodawcy mają to, czego szukasz!',
-        icon: 'icon',
-        title: 'Określ cechy idealnego Pracodawcy'
+        description: 'Angular, React, Vue.js, NativeScript, Electron, Node.js: dowiedz się, jak korzystać z JavaScript od frontendu do backendu, w natywnych aplikacjach mobilnych, komputerowych, a nawet w natywnym programowaniu w chmurze. Zbuduj swój własny zestaw narzędzi!',
+        icon: CodingIcon,
+        title: 'Zostań full-stack developerem'
       },
       {
-        description: 'Przyjdź na targi pracy Career EXPO i przekonaj wybranego Pracodawcę, aby zatrudnił właśnie Ciebie! Weź udział w Szybkich Rekrutacjach, bezpłatnych szkoleniach i konsultacjach kariery.',
-        icon: 'icon',
-        title: 'Poznajcie się… i aplikuj!'
+        description: 'JavaScript ciągle się rozwija. Od najlepszych praktyk w aplikacjach jednostronnych po progresywnych aplikacjach internetowych i obliczeniach bezserwerowych po rozwoju blockchaina: Nasi uznani eksperci przedstawiają najnowsze trendy i najnowsze technologie technologii JavaScript i poszerzają ofertę o JS tam, gdzie jest to ważne.',
+        icon: IdeaIcon,
+        title: 'Zainspiruj się'
       }
     ]
   },
 
   creatorCv: {
-    description: 'Stwórz skuteczne CV w mniej niż 10 minut.',
-    title: 'Bezpłatny kreator CV',
-    label: 'Chcę stworzyć skuteczne CV',
-    onClick: () => null,
+    description: 'Hala Stulecia, ul. Wystawowa 1, Wrocław',
     id: '3',
     itemsList: [
       {
-        description: 'Wybierz jeden z wielu atrakcyjnych szablonów stworzonych przez grafików i rekruterów! Wybierz CV, które rozkocha w sobie Twojego przyszłego Pracodawcę. ',
-        number: '1',
-        title: 'Wybierz szablon'
+        description: 'Z okazji piątej edycji dla każdego przygotowaliśmy zestaw upominków oraz masę niesamowitych atrakcji!',
+        number: '5',
+        title: 'Edycja'
       },
       {
-        description: 'Uzupełnij swoje dane i dodaj zdjęcie. Zapisz szablon jako jeden z wielu i dostosowuj do różnych stanowisk! ',
-        number: '2',
-        title: 'Uzupełnij dane'
-      },
-      {
-        description: 'Pobierz CV lub aplikuj bezpośrednio z Career EXPO! Całkowicie bezpłatnie.',
+        description: 'W tym roku nasza konferencja będzie trwać aż trzy dni. Wystąpi na niej łącznie 55 prelegentów z całego świata!',
         number: '3',
-        title: 'Pobierz swoje CV'
+        title: 'Dni'
+      },
+      {
+        description: 'Tym razem przygotowaliśmy dla was dwie sceny pełne niesamowitych prelekcji z tematyki Front-end & Back-end.',
+        number: '2',
+        title: 'Sceny'
       }
-    ]
+    ],
+    label: 'Dowiedz się więcej',
+    onClick: () => null,
+    title: '05 - 08 Luty 2019'
   },
 
   featuresEmployer: {
-    description: 'Najpierw powiedz nam kim jesteś i czego oczekujesz od życia, a my zarekomendujemy Ci Pracodawcę, który odpowiada Twoim wartościom. Choć związek z firmą najczęściej nie jest wieczny, to w pracy spędzamy 1/3 swojego życia - dopasuj więc kulturę organizacyjną do Twoich preferencji, abyś czuł się jak ryba w wodzie!',
-    title: 'Określ cechy idealnego Pracodawcy',
-    onClick: () => null,
-    label: 'Załóż bezpłatne konto',
+    description: 'W tym roku przygotowaliśmy dla wszystkich naszych uczestników masę niesamowitych atrakcji!',
     itemsList: [
       {
-        description: 'Wolisz samodzielną pracę i formalną atmosferę?',
-        icon: 'icon'
+        description: '25+ stanowisk z najlepszymi grami na PS4, Xbox One X & Nintendo!',
+        icon: ControllerIcon
       },
       {
-        description: 'Mamy takich Pracodawców! Sprawdź to sam.',
-        icon: 'icon'
+        description: '20+ profesionalnych stanowisk gejmerskich wyposarzonych w najnowsze gry PC',
+        icon: ComputerIcon
       },
       {
-        description: 'Preferujesz pracę zdalną i dużą dozę zaufania?',
-        icon: 'icon'
+        description: '15 stanowisk z najlepszymi efektami VR dzięki czemu użytkownicy konferencji mogą przenieść się do magicznego świata.',
+        icon: VRIcon
       },
       {
-        description: 'Chcesz pracować w dużym zespole i jeździć na światowej rangi konferencje?',
-        icon: 'icon'
+        description: '8 stołów bilardowych i 12 stołów do piłkarzyków oraz 20 tarcz do gry w darty!',
+        icon: BillardIcon
       }
-    ]
+    ],
+    label: 'Sprawdź pozostałe atrakcje',
+    onClick: () => null,
+    title: 'A w przerwie między prelekcjami...'
   },
 
   footer: {
@@ -88,122 +101,126 @@ export const translations = {
       {
         bgColor: FbColor,
         href: 'www.facebook.com',
-        icon: 'FB',
-        label: 'Lubie to!'
+        icon: FacebookIcon
       },
       {
         bgColor: InColor,
-        href: 'www.linkedin.com',
-        icon: 'IN',
-        label: 'Obserwuj'
+        href: 'www.instagram.com',
+        icon: InstagramIcon
       },
       {
         bgColor: TwColor,
         href: 'www.twitter.com',
-        icon: 'TW',
-        label: 'Obserwuj @aasfasasf'
+        icon: TwitterIcon
       },
       {
         bgColor: YtColor,
         href: 'www.youtube.com',
-        icon: 'YT',
-        label: 'YouTube'
+        icon: YoutubeIcon
       }
     ],
-    menuLeft: {
-      linksList: [
-        {
-          href: '/wiedza',
-          label: 'Wiedza'
-        },
-        {
-          href: '/faq',
-          label: 'FAQ'
-        },
-        {
-          href: '/regulamin-serwisu',
-          label: 'Regulamin serwisu'
-        },
-        {
-          href: '/polityka-prywatnosci',
-          label: 'Polityka prywatności'
-        }
-      ],
-      title: 'Dla odwiedzających'
-    },
     menuCenter: {
       linksList: [
         {
-          href: '/dolacz-do-wystawcow',
-          label: 'Dołącz do Wystawców'
-        },
-        {
-          href: '/zorganizuj-stoisko-targowe',
-          label: 'Zorganizuj stoisko targowe'
-        },
-        {
-          href: '/stwórz-własny-film-EB',
-          label: 'Stwórz własny film EB!'
-        },
-        {
-          href: '/edukacja',
-          label: 'Edukacja'
+          href: '/kontakt',
+          label: 'Kontakt'
         },
         {
           href: '/partnerzy',
           label: 'Partnerzy'
         },
         {
-          href: '/kontakt',
-          label: 'Kontakt'
+          href: '/faq',
+          label: 'FAQ'
+        },
+        {
+          href: '/regulamin',
+          label: 'Regulamin'
+        },
+        {
+          href: '/polityka-prywatnosci',
+          label: 'Polityka prywatności'
         }
       ],
-      title: 'Współpraca'
+      title: 'O nas'
+    },
+    menuLeft: {
+      linksList: [
+        {
+          href: '/prelegenci',
+          label: 'Prelegenci'
+        },
+        {
+          href: '/warsztaty',
+          label: 'Warsztaty'
+        },
+        {
+          href: '/harmonogram',
+          label: 'Harmonogram'
+        },
+        {
+          href: '/miejsce-spotkania',
+          label: 'Miejsce spotkania'
+        },
+        {
+          href: '/sponsorzy',
+          label: 'Sponsorzy'
+        }
+      ],
+      title: 'Dla odwiedzających'
     },
     menuRight: {
       linksList: [
         {
-          href: '/wrocław',
-          label: 'Wrocław'
+          href: '/2018',
+          label: '2018'
         },
         {
-          href: '/poznan',
-          label: 'Poznań'
+          href: '/2017',
+          label: '2017'
+        },
+        {
+          href: '/2016',
+          label: '2016'
+        },
+        {
+          href: '/2015',
+          label: '2015'
         }
       ],
-      title: 'Targi Pracy'
+      title: 'Poprzednie edycje'
     }
   },
 
   header: {
-    linkHref: '/login',
-    logo: 'LOGO',
     buttonId: '1',
-    buttonLabel: 'Zdobądź bilet',
+    buttonLabel: 'Kup bilet',
     buttonOnClick: () => null,
+    linkHref: '/login',
     linkLabel: 'Zaloguj się',
     linksList: [
       {
-        href: '/prelekcje-i-szkolenia',
-        label: 'Prelekcje i szkolenia'
+        href: '/prelegenci',
+        label: 'Prelegenci'
       },
       {
-        href: '/pracodawcy',
-        label: 'Pracodawcy'
+        href: '/harmonogram',
+        label: 'Harmonogram'
       },
       {
-        href: '/strefy',
-        label: 'Strefy'
+        href: '/warsztaty',
+        label: 'Warsztaty'
       }
-    ]
+    ],
+    logo: LogoImage
   },
 
   homepageSectionOne: {
+    description: 'StackFull Conf to najwieksza konferencja Webowa w Europie. Znajdziecie u nas pełno nowinek zarówno z świata Back-endu jak i Front-endu.',
     icon: 'icon',
-    description: 'Stwórz piękne CV, określ idealnego Pracodawcę i przekonaj go do siebie na targach pracy Career EXPO.',
     id: '2',
-    label: 'Załóż bezpłatne konto',
+    label: 'Poznaj prelegentów',
     onClick: () => null,
-    title: 'Pomożemy Ci znaleźć wymarzoną pracę'
+    title: 'Dołącz do nas na StackFull Conf!'
   }
 }
