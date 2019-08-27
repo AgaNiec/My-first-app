@@ -9,7 +9,23 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
 `
 
-export const HeaderLogo = styled.div``
+export const HeaderLogo = styled.div`
+  @media (min-width: 768px) {
+    max-width: 150px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    max-width: 140px;
+  }
+
+  @media (min-width: 480px) and (max-width: 575px) {
+    max-width: 130px;
+  }
+
+  @media (max-width: 479px) {
+    max-width: 120px;
+  }
+`
 
 export const HeaderMenuList = styled.div`
   @media (max-width: 991px) {

@@ -26,14 +26,30 @@ export const FooterLeft = styled.div`
 `
 
 export const FooterLogo = styled.div`
-  margin: 0 0 40px;
-
   @media (min-width: 992px) {
+    margin: 0 0 20px;
     text-align: left;
   }
 
   @media (max-width: 991px) {
+    margin: 0 auto 20px;
     text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 150px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    max-width: 140px;
+  }
+
+  @media (min-width: 480px) and (max-width: 575px) {
+    max-width: 130px;
+  }
+
+  @media (max-width: 479px) {
+    max-width: 120px;
   }
 `
 
