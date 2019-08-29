@@ -1,18 +1,18 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import RectangleItem from '.'
+import Rectangle from '.'
 
-describe('RectangleItem', () => {
+describe('Rectangle', () => {
   const RECTANGLE_ICON = '[data-test="rectangleIcon"]'
-  const RECTANGLE_ITEM_DESCRIPTION_H4 = '[data-test="rectangleItemDescriptionH4"]'
+  const RECTANGLE_ITEM_DESCRIPTION_H4 = '[data-test="rectangleDescriptionH4"]'
   const description = 'Custom Description'
   const icon = jest.fn()
 
   describe('Logic', () => {
     it('Should render default component', () => {
       const wrapper = shallow(
-        <RectangleItem />
+        <Rectangle />
       )
 
       expect(wrapper.find(RECTANGLE_ICON).exists()).toBeFalsy()
@@ -20,7 +20,7 @@ describe('RectangleItem', () => {
 
     it('Should pass proper description property', () => {
       const wrapper = shallow(
-        <RectangleItem description={description} />
+        <Rectangle description={description} />
       )
 
       expect(wrapper.find(RECTANGLE_ITEM_DESCRIPTION_H4).text()).toEqual(description)
@@ -28,7 +28,7 @@ describe('RectangleItem', () => {
 
     it('Should pass proper icon property', () => {
       const wrapper = shallow(
-        <RectangleItem icon={icon} />
+        <Rectangle icon={icon} />
       )
 
       expect(wrapper.find(RECTANGLE_ICON).type()).toEqual(icon)
