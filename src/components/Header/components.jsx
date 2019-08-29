@@ -12,7 +12,6 @@ export const HeaderContainer = styled.div`
 export const HeaderLogoLink = styled.a`
   cursor: pointer;
   display: block;
-  outline: none;
 
   @media (min-width: 768px) {
     max-width: 150px;
