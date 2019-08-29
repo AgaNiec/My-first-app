@@ -1,20 +1,20 @@
 import styled from 'styled-components'
 
-export const FeaturesEmployerContainer = styled.div`
+export const AttractionsContainer = styled.div`
   @media (min-width: 1200px) {
     display: flex;
   }
 `
 
-export const FeaturesEmployerLeft = styled.div`
+export const AttractionsLeft = styled.div`
   @media (min-width: 1200px) {
     padding: 20px 100px 0 0;
   }
 `
 
-export const FeaturesEmployerSection = styled.div``
+export const AttractionsSection = styled.div``
 
-export const FeaturesEmployerButton = styled.div`
+export const AttractionsButton = styled.div`
   margin: 50px 0 0;
 
   @media (min-width: 992px) {
@@ -26,7 +26,7 @@ export const FeaturesEmployerButton = styled.div`
   }
 `
 
-export const FeaturesEmployerRight = styled.div`
+export const AttractionsRight = styled.div`
   display: flex;
   flex-wrap: wrap;
   
@@ -41,7 +41,7 @@ export const FeaturesEmployerRight = styled.div`
   }
 `
 
-export const FeaturesEmployerRectangle = styled.div`
+export const AttractionsRectangle = styled.div`
   margin-bottom: 20px;
 
   @media (min-width: 1200px) {

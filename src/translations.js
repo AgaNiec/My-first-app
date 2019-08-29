@@ -46,7 +46,7 @@ export const translations = {
     ]
   },
 
-  creatorCv: {
+  location: {
     description: 'Hala Stulecia, ul. Wystawowa 1, Wrocław',
     id: '3',
     itemsList: [
@@ -71,7 +71,7 @@ export const translations = {
     title: '05 - 08 Luty 2019'
   },
 
-  featuresEmployer: {
+  attractions: {
     description: 'W tym roku przygotowaliśmy dla wszystkich naszych uczestników masę niesamowitych atrakcji!',
     itemsList: [
       {
@@ -200,16 +200,20 @@ export const translations = {
     linkLabel: 'Zaloguj się',
     linksList: [
       {
-        href: '/prelegenci',
-        label: 'Prelegenci'
+        href: '/#dlaczego-js',
+        label: 'Dlaczego JS?'
       },
       {
-        href: '/harmonogram',
-        label: 'Harmonogram'
+        href: '/#lokalizacja',
+        label: 'Lokalizacja'
       },
       {
-        href: '/warsztaty',
-        label: 'Warsztaty'
+        href: '/#atrakcje',
+        label: 'Atrakcje'
+      },
+      {
+        href: '/#sponsorzy',
+        label: 'Sponsorzy'
       }
     ],
     logo: LogoImage

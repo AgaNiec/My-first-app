@@ -1,12 +1,12 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import FeaturesEmployer from '.'
+import Attractions from '.'
 
-describe('FeaturesEmployer', () => {
-  const FEATURES_EMPLOYER_BUTTON = '[data-test="featuresEmployerButton"]'
-  const FEATURES_EMPLOYER_RECTANGLE = '[data-test="featuresEmployerRectangle"]'
-  const FEATURES_EMPLOYER_SECTION = '[data-test="featuresEmployerSection"]'
+describe('Attractions', () => {
+  const FEATURES_EMPLOYER_BUTTON = '[data-test="attractionsButton"]'
+  const FEATURES_EMPLOYER_RECTANGLE = '[data-test="attractionsRectangle"]'
+  const FEATURES_EMPLOYER_SECTION = '[data-test="attractionsSection"]'
   const description = 'Custom Description'
   const id = 0
   const itemsList = [
@@ -25,7 +25,7 @@ describe('FeaturesEmployer', () => {
   describe('Logic', () => {
     it('Should redner default component', () => {
       const wrapper = shallow(
-        <FeaturesEmployer {...defaultProps} />
+        <Attractions {...defaultProps} />
       )
 
       expect(wrapper.find(FEATURES_EMPLOYER_RECTANGLE).exists()).toBeFalsy()
@@ -44,7 +44,7 @@ describe('FeaturesEmployer', () => {
         'Should pass proper %s property',
         (propName, props, selector, expected) => {
           const wrapper = shallow(
-            <FeaturesEmployer
+            <Attractions
               {...defaultProps}
               {...props}
             />

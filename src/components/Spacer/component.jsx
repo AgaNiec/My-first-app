@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const SpacerContainer = styled.div`
   @media (min-width: 992px) {
-    margin: 0 0 250px;
+    margin: 50px 0 200px;
   }
 
   @media (min-width: 576px) and (max-width: 991px) {
@@ -10,6 +10,6 @@ export const SpacerContainer = styled.div`
   }
 
   @media (max-width: 575px) {
-    margin: 0 0 100px;
+    margin: 0 0 120px;
   }
 `

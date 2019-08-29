@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {
-  CreatorCvButton,
-  CreatorCvContainer,
-  CreatorCvStepContainer,
+  LocationButton,
+  LocationContainer,
+  LocationStepContainer,
   StepElement
 } from './components'
 
@@ -12,7 +12,7 @@ import Button from '../../../components/Button'
 import Section from '../../../components/Section'
 import Step from '../../../components/Step'
 
-const CreatorCv = ({
+const Location = ({
   description,
   id,
   itemsList,
@@ -20,15 +20,15 @@ const CreatorCv = ({
   onClick,
   title
 }) => (
-  <CreatorCvContainer>
+  <LocationContainer>
     <Section
       align='center'
-      data-test='creatorCvSection'
+      data-test='locationSection'
       description={description}
       title={title}
     />
 
-    <CreatorCvStepContainer>
+    <LocationStepContainer>
       {
         itemsList.map(({ description, number, title }, index) => (
           <StepElement key={index}>
@@ -41,22 +41,22 @@ const CreatorCv = ({
           </StepElement>
         ))
       }
-    </CreatorCvStepContainer>
+    </LocationStepContainer>
 
-    <CreatorCvButton>
+    <LocationButton>
       <Button
-        data-test='creatorCvButton'
+        data-test='locationButton'
         id={id}
         label={label}
         onClick={onClick}
       />
-    </CreatorCvButton>
-  </CreatorCvContainer>
+    </LocationButton>
+  </LocationContainer>
 )
 
-export default CreatorCv
+export default Location
 
-CreatorCv.propTypes = {
+Location.propTypes = {
   description: PropTypes.string,
   id: PropTypes.oneOfType([
     PropTypes.number,
@@ -74,6 +74,6 @@ CreatorCv.propTypes = {
   title: PropTypes.string
 }
 
-CreatorCv.defaultProps = {
+Location.defaultProps = {
   itemsList: []
 }

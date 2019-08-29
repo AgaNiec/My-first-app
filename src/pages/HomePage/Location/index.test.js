@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import CreatorCv from '.'
+import Location from '.'
 
-describe('CreatorCv', () => {
-  const CREATOR_CV_BUTTON = '[data-test="creatorCvButton"]'
-  const CREATOR_CV_SECTION = '[data-test="creatorCvSection"]'
+describe('Location', () => {
+  const CREATOR_CV_BUTTON = '[data-test="locationButton"]'
+  const CREATOR_CV_SECTION = '[data-test="locationSection"]'
   const STEP_CONTAINER = '[data-test="stepContainer"]'
   const description = 'Custom Description'
   const id = 0
@@ -26,7 +26,7 @@ describe('CreatorCv', () => {
   describe('Logic', () => {
     it('Should render default component', () => {
       const wrapper = shallow(
-        <CreatorCv {...defaultProps} />
+        <Location {...defaultProps} />
       )
 
       expect(wrapper.find(STEP_CONTAINER).exists()).toBeFalsy()
@@ -46,7 +46,7 @@ describe('CreatorCv', () => {
         'Should pass proper %s property',
         (propName, props, selector, expected) => {
           const wrapper = shallow(
-            <CreatorCv
+            <Location
               {...defaultProps}
               {...props}
             />

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const CreatorCvContainer = styled.div``
+export const LocationContainer = styled.div``
 
-export const CreatorCvStepContainer = styled.div`
+export const LocationStepContainer = styled.div`
   @media (min-width: 992px) {
     display: flex;
   }
@@ -23,7 +23,7 @@ export const StepElement = styled.div`
   }
 `
 
-export const CreatorCvButton = styled.div`
+export const LocationButton = styled.div`
   text-align: center;
 
   @media (min-width: 768px) {

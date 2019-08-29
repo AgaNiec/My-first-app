@@ -1,11 +1,11 @@
 import React from 'react'
 
+import Attractions from './Attractions'
 import Banner from '../../components/Banner'
 import CardList from '../../components/Card/CardList'
-import CreatorCv from './CreatorCv'
-import FeaturesEmployer from './FeaturesEmployer'
 import HomepageSectionOne from './HomepageSectionOne'
 import InnerWrapper from '../../components/InnerWrapper'
+import Location from './Location'
 import Site from '../../components/Site'
 import Spacer from '../../components/Spacer'
 
@@ -38,32 +38,32 @@ const Homepage = () => (
         title={translations.homepageSectionOne.title}
       />
 
-      <Spacer />
+      <Spacer id='dlaczego-js' />
 
       <CardList itemsList={translations.cardList.itemsList} />
 
       <Spacer id='lokalizacja' />
 
-      <CreatorCv
-        description={translations.creatorCv.description}
-        id={translations.creatorCv.id}
-        itemsList={translations.creatorCv.itemsList}
-        label={translations.creatorCv.label}
-        onClick={translations.creatorCv.onClick}
-        title={translations.creatorCv.title}
+      <Location
+        description={translations.location.description}
+        id={translations.location.id}
+        itemsList={translations.location.itemsList}
+        label={translations.location.label}
+        onClick={translations.location.onClick}
+        title={translations.location.title}
       />
 
-      <Spacer />
+      <Spacer id='atrakcje' />
 
-      <FeaturesEmployer
-        description={translations.featuresEmployer.description}
-        itemsList={translations.featuresEmployer.itemsList}
-        label={translations.featuresEmployer.label}
-        onClick={translations.featuresEmployer.onClick}
-        title={translations.featuresEmployer.title}
+      <Attractions
+        description={translations.attractions.description}
+        itemsList={translations.attractions.itemsList}
+        label={translations.attractions.label}
+        onClick={translations.attractions.onClick}
+        title={translations.attractions.title}
       />
 
-      <Spacer />
+      <Spacer id='sponsorzy' />
 
       <Banner
         description={translations.banner.description}

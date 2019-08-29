@@ -2,19 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {
-  FeaturesEmployerButton,
-  FeaturesEmployerContainer,
-  FeaturesEmployerLeft,
-  FeaturesEmployerRectangle,
-  FeaturesEmployerRight,
-  FeaturesEmployerSection
+  AttractionsButton,
+  AttractionsContainer,
+  AttractionsLeft,
+  AttractionsRectangle,
+  AttractionsRight,
+  AttractionsSection
 } from './components'
 
 import Button from '../../../components/Button'
 import Rectangle from '../../../components/Rectangle'
 import Section from '../../../components/Section'
 
-const FeaturesEmployer = ({
+const Attractions = ({
   description,
   id,
   itemsList,
@@ -22,45 +22,45 @@ const FeaturesEmployer = ({
   onClick,
   title
 }) => (
-  <FeaturesEmployerContainer>
-    <FeaturesEmployerLeft >
-      <FeaturesEmployerSection>
+  <AttractionsContainer>
+    <AttractionsLeft >
+      <AttractionsSection>
         <Section
-          data-test='featuresEmployerSection'
+          data-test='attractionsSection'
           description={description}
           title={title}
         />
-      </FeaturesEmployerSection>
+      </AttractionsSection>
 
-      <FeaturesEmployerButton>
+      <AttractionsButton>
         <Button
-          data-test='featuresEmployerButton'
+          data-test='attractionsButton'
           id={id}
           label={label}
           onClick={onClick}
         />
-      </FeaturesEmployerButton>
-    </FeaturesEmployerLeft>
+      </AttractionsButton>
+    </AttractionsLeft>
 
-    <FeaturesEmployerRight>
+    <AttractionsRight>
       {
         itemsList.map(({ description, icon }, index) => (
-          <FeaturesEmployerRectangle key={index}>
+          <AttractionsRectangle key={index}>
             <Rectangle
-              data-test='featuresEmployerRectangle'
+              data-test='attractionsRectangle'
               description={description}
               icon={icon}
             />
-          </FeaturesEmployerRectangle>
+          </AttractionsRectangle>
         ))
       }
-    </FeaturesEmployerRight>
-  </FeaturesEmployerContainer>
+    </AttractionsRight>
+  </AttractionsContainer>
 )
 
-export default FeaturesEmployer
+export default Attractions
 
-FeaturesEmployer.propTypes = {
+Attractions.propTypes = {
   itemsList: PropTypes.arrayOf(
     PropTypes.shape({
       description: PropTypes.string,
@@ -77,6 +77,6 @@ FeaturesEmployer.propTypes = {
   title: PropTypes.string
 }
 
-FeaturesEmployer.defaultProps = {
+Attractions.defaultProps = {
   itemsList: []
 }
