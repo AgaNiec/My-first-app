@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { HomepageSpacer } from './components'
-
 import Banner from '../../components/Banner'
 import CardList from '../../components/Card/CardList'
 import CreatorCv from './CreatorCv'
@@ -9,6 +7,7 @@ import FeaturesEmployer from './FeaturesEmployer'
 import HomepageSectionOne from './HomepageSectionOne'
 import InnerWrapper from '../../components/InnerWrapper'
 import Site from '../../components/Site'
+import Spacer from '../../components/Spacer'
 
 import { translations } from '../../translations'
 
@@ -39,11 +38,11 @@ const Homepage = () => (
         title={translations.homepageSectionOne.title}
       />
 
-      <HomepageSpacer />
+      <Spacer />
 
       <CardList itemsList={translations.cardList.itemsList} />
 
-      <HomepageSpacer />
+      <Spacer id='lokalizacja' />
 
       <CreatorCv
         description={translations.creatorCv.description}
@@ -54,7 +53,7 @@ const Homepage = () => (
         title={translations.creatorCv.title}
       />
 
-      <HomepageSpacer />
+      <Spacer />
 
       <FeaturesEmployer
         description={translations.featuresEmployer.description}
@@ -64,7 +63,7 @@ const Homepage = () => (
         title={translations.featuresEmployer.title}
       />
 
-      <HomepageSpacer />
+      <Spacer />
 
       <Banner
         description={translations.banner.description}
