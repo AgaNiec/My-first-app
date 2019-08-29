@@ -7,7 +7,7 @@ import {
   HeaderLink,
   HeaderLinkButton,
   HeaderLinkContainer,
-  HeaderLogo,
+  HeaderLogoLink,
   HeaderMenuList
 } from './components'
 import { H4 } from '../Typography/components'
@@ -28,13 +28,13 @@ const Header = ({
 }) => (
   <InnerWrapper>
     <HeaderContainer>
-      <HeaderLogo>
+      <HeaderLogoLink href='/'>
         <Image
           alt='StackFull'
           data-test='headerLogo'
           src={logo}
         />
-      </HeaderLogo>
+      </HeaderLogoLink>
 
       <HeaderMenuList>
         <MenuList

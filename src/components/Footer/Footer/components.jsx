@@ -33,7 +33,11 @@ export const FooterLeft = styled.div`
   }
 `
 
-export const FooterLogo = styled.div`
+export const FooterLogoLink = styled.a`
+  cursor: pointer;
+  display: block;
+  outline: none;
+
   @media (min-width: 992px) {
     margin: 0 0 20px;
     text-align: left;

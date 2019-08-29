@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import {
   FooterContainer,
   FooterLeft,
-  FooterLogo,
+  FooterLogoLink,
   FooterRight
 } from './components'
 
@@ -26,13 +26,13 @@ const Footer = ({
   <InnerWrapper>
     <FooterContainer>
       <FooterLeft>
-        <FooterLogo>
+        <FooterLogoLink>
           <Image
             alt='StackFull'
             data-test='footerLogo'
             src={logo}
           />
-        </FooterLogo>
+        </FooterLogoLink>
 
         <SocialList
           data-test='footerSocialList'
