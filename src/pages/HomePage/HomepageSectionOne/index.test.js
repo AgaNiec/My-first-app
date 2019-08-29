@@ -19,12 +19,12 @@ describe('HomepageSectionOne', () => {
 
   describe('Logic', () => {
     test.each([
-      ['description', { description: description }, HOMEPAGE_SECTION_ONE_SECTION, description],
-      ['icon', { icon: icon }, HOMEPAGE_SECTION_ONE_ICON, icon],
-      ['id', { id: id }, HOMEPAGE_SECTION_ONE_BUTTON, id],
-      ['label', { label: label }, HOMEPAGE_SECTION_ONE_BUTTON, label],
+      ['description', { description }, HOMEPAGE_SECTION_ONE_SECTION, description],
+      ['icon', { icon }, HOMEPAGE_SECTION_ONE_ICON, icon],
+      ['id', { id }, HOMEPAGE_SECTION_ONE_BUTTON, id],
+      ['label', { label }, HOMEPAGE_SECTION_ONE_BUTTON, label],
       ['onClick', { onClick: onClickSpy }, HOMEPAGE_SECTION_ONE_BUTTON, onClickSpy],
-      ['title', { title: title }, HOMEPAGE_SECTION_ONE_SECTION, title]
+      ['title', { title }, HOMEPAGE_SECTION_ONE_SECTION, title]
     ])(
       'Should pass proper %s property',
       (propName, props, selector, expected) => {

@@ -33,13 +33,13 @@ describe('FeaturesEmployer', () => {
 
     describe('Props', () => {
       test.each([
-        ['description', { description: description }, FEATURES_EMPLOYER_SECTION, description],
-        ['description', { itemsList: itemsList }, FEATURES_EMPLOYER_RECTANGLE_ITEM, itemsList[0].description],
-        ['icon', { itemsList: itemsList }, FEATURES_EMPLOYER_RECTANGLE_ITEM, itemsList[0].icon],
-        ['id', { id: id }, FEATURES_EMPLOYER_BUTTON, id],
-        ['label', { label: label }, FEATURES_EMPLOYER_BUTTON, label],
+        ['description', { description }, FEATURES_EMPLOYER_SECTION, description],
+        ['description', { itemsList }, FEATURES_EMPLOYER_RECTANGLE_ITEM, itemsList[0].description],
+        ['icon', { itemsList }, FEATURES_EMPLOYER_RECTANGLE_ITEM, itemsList[0].icon],
+        ['id', { id }, FEATURES_EMPLOYER_BUTTON, id],
+        ['label', { label }, FEATURES_EMPLOYER_BUTTON, label],
         ['onClick', { onClick: onClickSpy }, FEATURES_EMPLOYER_BUTTON, onClickSpy],
-        ['title', { title: title }, FEATURES_EMPLOYER_SECTION, title]
+        ['title', { title }, FEATURES_EMPLOYER_SECTION, title]
       ])(
         'Should pass proper %s property',
         (propName, props, selector, expected) => {

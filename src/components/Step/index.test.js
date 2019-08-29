@@ -13,9 +13,9 @@ describe('Step', () => {
 
   describe('Logic', () => {
     test.each([
-      ['description', { description: description }, STEP_DESCRIPTION_H4, description],
-      ['number', { number: number }, STEP_NUMBER_LARGE, number],
-      ['title', { title: title }, STEP_TITLE_H3, title]
+      ['description', { description }, STEP_DESCRIPTION_H4, description],
+      ['number', { number }, STEP_NUMBER_LARGE, number],
+      ['title', { title }, STEP_TITLE_H3, title]
     ])(
       'Should pass proper %s',
       (_, props, selector, expected) => {

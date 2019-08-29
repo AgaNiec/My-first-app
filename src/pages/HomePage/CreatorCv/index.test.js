@@ -34,14 +34,14 @@ describe('CreatorCv', () => {
 
     describe('Props', () => {
       test.each([
-        ['description', { description: description }, CREATOR_CV_SECTION, description],
-        ['id', { id: id }, CREATOR_CV_BUTTON, id],
-        ['description', { itemsList: itemsList }, STEP_CONTAINER, itemsList[0].description],
-        ['number', { itemsList: itemsList }, STEP_CONTAINER, itemsList[0].number],
-        ['title', { itemsList: itemsList }, STEP_CONTAINER, itemsList[0].title],
-        ['label', { label: label }, CREATOR_CV_BUTTON, label],
+        ['description', { description }, CREATOR_CV_SECTION, description],
+        ['id', { id }, CREATOR_CV_BUTTON, id],
+        ['description', { itemsList }, STEP_CONTAINER, itemsList[0].description],
+        ['number', { itemsList }, STEP_CONTAINER, itemsList[0].number],
+        ['title', { itemsList }, STEP_CONTAINER, itemsList[0].title],
+        ['label', { label }, CREATOR_CV_BUTTON, label],
         ['onClick', { onClick: onClickSpy }, CREATOR_CV_BUTTON, onClickSpy],
-        ['title', { title: title }, CREATOR_CV_SECTION, title]
+        ['title', { title }, CREATOR_CV_SECTION, title]
       ])(
         'Should pass proper %s property',
         (propName, props, selector, expected) => {

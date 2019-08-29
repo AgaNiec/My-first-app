@@ -22,8 +22,8 @@ describe('SocialItem', () => {
 
     describe('Props', () => {
       test.each([
-        ['bgColor', { bgColor: bgColor }, SOCIAL_ITEM_LINK, bgColor],
-        ['href', { href: href }, SOCIAL_ITEM_LINK, href]
+        ['bgColor', { bgColor }, SOCIAL_ITEM_LINK, bgColor],
+        ['href', { href }, SOCIAL_ITEM_LINK, href]
       ])(
         'Should pass proper %s property',
         (propName, props, selector, expected) => {

@@ -18,8 +18,8 @@ describe('Banner', () => {
 
   describe('Logic', () => {
     test.each([
-      ['description', { description: description }, BANNER_DESCRIPTION_H4, description],
-      ['title', { title: title }, BANNER_TITLE_H1, title]
+      ['description', { description }, BANNER_DESCRIPTION_H4, description],
+      ['title', { title }, BANNER_TITLE_H1, title]
     ])('Should pass proper %s',
       (_, prop, selector, expected) => {
         const wrapper = shallow(
@@ -34,8 +34,8 @@ describe('Banner', () => {
     )
 
     test.each([
-      ['id', { id: id }, id],
-      ['label', { label: label }, label],
+      ['id', { id }, id],
+      ['label', { label }, label],
       ['onClick', { onClick: onClickSpy }, onClickSpy]
     ])('Should pass proper %s',
       (propName, props, expected) => {

@@ -33,12 +33,12 @@ describe('Header', () => {
 
     describe('Props', () => {
       test.each([
-        ['buttonId', 'id', { buttonId: buttonId }, HEADER_BUTTON, buttonId],
-        ['buttonLabel', 'label', { buttonLabel: buttonLabel }, HEADER_BUTTON, buttonLabel],
+        ['buttonId', 'id', { buttonId }, HEADER_BUTTON, buttonId],
+        ['buttonLabel', 'label', { buttonLabel }, HEADER_BUTTON, buttonLabel],
         ['buttonOnClick', 'onClick', { buttonOnClick: buttonOnClickSpy }, HEADER_BUTTON, buttonOnClickSpy],
-        ['linkHref', 'href', { linkHref: linkHref }, HEADER_LINK, linkHref],
-        ['linksList', 'linksList', { linksList: linksList }, MENU_LIST, linksList],
-        ['src', 'src', { logo: logo }, HEADER_LOGO, logo]
+        ['linkHref', 'href', { linkHref }, HEADER_LINK, linkHref],
+        ['linksList', 'linksList', { linksList }, MENU_LIST, linksList],
+        ['src', 'src', { logo }, HEADER_LOGO, logo]
       ])(
         'Should pass proper %s property',
         (_, propName, props, selector, expected) => {

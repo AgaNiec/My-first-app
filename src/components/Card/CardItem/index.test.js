@@ -30,8 +30,8 @@ describe('CardItem', () => {
 
     describe('Props', () => {
       test.each([
-        ['description', { description: description }, CARD_ITEM_DESCRIPTION, description],
-        ['title', { title: title }, CARD_ITEM_TITLE, title]
+        ['description', { description }, CARD_ITEM_DESCRIPTION, description],
+        ['title', { title }, CARD_ITEM_TITLE, title]
       ])(
         'Should pass proper %s',
         (_, prop, selector, expected) => {

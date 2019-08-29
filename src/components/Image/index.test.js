@@ -21,8 +21,8 @@ describe('Image', () => {
 
     describe('Props', () => {
       test.each([
-        ['alt', { alt: alt }, alt],
-        ['src', { src: src }, src]
+        ['alt', { alt }, alt],
+        ['src', { src }, src]
       ])(
         'Should pass proper %s property',
         (propName, props, expected) => {

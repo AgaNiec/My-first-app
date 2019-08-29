@@ -21,9 +21,9 @@ describe('Footer', () => {
   describe('Logic', () => {
     describe('LinksList', () => {
       test.each([
-        ['linksListCenter', { linksListCenter: linksListCenter }, FOOTER_MENU_CENTER, linksListCenter],
-        ['linksListLeft', { linksListLeft: linksListLeft }, FOOTER_MENU_LEFT, linksListLeft],
-        ['linksListRight', { linksListRight: linksListRight }, FOOTER_MENU_RIGHT, linksListRight]
+        ['linksListCenter', { linksListCenter }, FOOTER_MENU_CENTER, linksListCenter],
+        ['linksListLeft', { linksListLeft }, FOOTER_MENU_LEFT, linksListLeft],
+        ['linksListRight', { linksListRight }, FOOTER_MENU_RIGHT, linksListRight]
       ])(
         'Should pass proper %s propperties',
         (_, props, selector, expected) => {
@@ -53,9 +53,9 @@ describe('Footer', () => {
 
     describe('Title', () => {
       test.each([
-        ['titleCenter', { titleCenter: titleCenter }, FOOTER_MENU_CENTER, titleCenter],
-        ['titleLeft', { titleLeft: titleLeft }, FOOTER_MENU_LEFT, titleLeft],
-        ['titleRight', { titleRight: titleRight }, FOOTER_MENU_RIGHT, titleRight]
+        ['titleCenter', { titleCenter }, FOOTER_MENU_CENTER, titleCenter],
+        ['titleLeft', { titleLeft }, FOOTER_MENU_LEFT, titleLeft],
+        ['titleRight', { titleRight }, FOOTER_MENU_RIGHT, titleRight]
       ])(
         'Should pass proper %s propperties',
         (_, props, selector, expected) => {

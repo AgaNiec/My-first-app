@@ -36,8 +36,8 @@ describe('Section', () => {
 
     describe('Props', () => {
       test.each([
-        ['description', { description: description }, SECTION_DESCRIPTION, description],
-        ['title', { title: title }, SECTION_TITLE, title]
+        ['description', { description }, SECTION_DESCRIPTION, description],
+        ['title', { title }, SECTION_TITLE, title]
       ])(
         'Should pass proper %s',
         (_, props, selector, expected) => {
