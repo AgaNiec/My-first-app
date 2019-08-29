@@ -9,7 +9,7 @@ describe('CardList', () => {
   const itemsList = [
     {
       description: 'Custom Description',
-      icon: 'Custom Icon',
+      icon: jest.fn(),
       title: 'Custom Title'
     }
   ]

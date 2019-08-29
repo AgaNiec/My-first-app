@@ -8,22 +8,40 @@ describe('CardItem', () => {
   const CARD_ITEM_ICON = '[data-test="cardItemIcon"]'
   const CARD_ITEM_TITLE = '[data-test="cardItemTitleH3"]'
   const description = 'Custom Description'
-  const icon = 'Custom Icon'
+  const icon = jest.fn()
   const title = 'Custom Title'
 
   describe('Logic', () => {
-    test.each([
-      ['description', { description: description }, CARD_ITEM_DESCRIPTION, description],
-      ['icon', { icon: icon }, CARD_ITEM_ICON, icon],
-      ['title', { title: title }, CARD_ITEM_TITLE, title]
-    ])('Should pass proper %s',
-      (_, prop, selector, expected) => {
-        const wrapper = shallow(
-          <CardItem {...prop} />
-        )
+    it('Shlound render default component', () => {
+      const wrapper = shallow(
+        <CardItem />
+      )
 
-        expect(wrapper.find(selector).text()).toEqual(expected)
-      }
-    )
+      expect(wrapper.find(CARD_ITEM_ICON).exists()).toBeFalsy()
+    })
+
+    it('Should pass proper icon', () => {
+      const wrapper = shallow(
+        <CardItem icon={icon} />
+      )
+
+      expect(wrapper.find(CARD_ITEM_ICON).type()).toEqual(icon)
+    })
+
+    describe('Props', () => {
+      test.each([
+        ['description', { description: description }, CARD_ITEM_DESCRIPTION, description],
+        ['title', { title: title }, CARD_ITEM_TITLE, title]
+      ])(
+        'Should pass proper %s',
+        (_, prop, selector, expected) => {
+          const wrapper = shallow(
+            <CardItem {...prop} />
+          )
+
+          expect(wrapper.find(selector).text()).toEqual(expected)
+        }
+      )
+    })
   })
 })

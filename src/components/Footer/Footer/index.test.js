@@ -19,19 +19,11 @@ describe('Footer', () => {
   const titleRight = ''
 
   describe('Logic', () => {
-    it('Should pass proper logo property', () => {
-      const wrapper = shallow(
-        <Footer logo={logo} />
-      )
-
-      expect(wrapper.find(FOOTER_LOGO).text()).toEqual(logo)
-    })
-
     describe('LinksList', () => {
       test.each([
-        [ 'linksListCenter', { linksListCenter: linksListCenter }, FOOTER_MENU_CENTER, linksListCenter ],
-        [ 'linksListLeft', { linksListLeft: linksListLeft }, FOOTER_MENU_LEFT, linksListLeft ],
-        [ 'linksListRight', { linksListRight: linksListRight }, FOOTER_MENU_RIGHT, linksListRight ]
+        ['linksListCenter', { linksListCenter: linksListCenter }, FOOTER_MENU_CENTER, linksListCenter],
+        ['linksListLeft', { linksListLeft: linksListLeft }, FOOTER_MENU_LEFT, linksListLeft],
+        ['linksListRight', { linksListRight: linksListRight }, FOOTER_MENU_RIGHT, linksListRight]
       ])(
         'Should pass proper %s propperties',
         (_, props, selector, expected) => {
@@ -41,6 +33,14 @@ describe('Footer', () => {
 
           expect(wrapper.find(selector).prop('linksList')).toEqual(expected)
         })
+    })
+
+    it('Should pass proper logo property', () => {
+      const wrapper = shallow(
+        <Footer logo={logo} />
+      )
+
+      expect(wrapper.find(FOOTER_LOGO).prop('src')).toEqual(logo)
     })
 
     it('Should pass proper socialItemsList propperties', () => {
@@ -53,9 +53,9 @@ describe('Footer', () => {
 
     describe('Title', () => {
       test.each([
-        [ 'titleCenter', { titleCenter: titleCenter }, FOOTER_MENU_CENTER, titleCenter ],
-        [ 'titleLeft', { titleLeft: titleLeft }, FOOTER_MENU_LEFT, titleLeft ],
-        [ 'titleRight', { titleRight: titleRight }, FOOTER_MENU_RIGHT, titleRight ]
+        ['titleCenter', { titleCenter: titleCenter }, FOOTER_MENU_CENTER, titleCenter],
+        ['titleLeft', { titleLeft: titleLeft }, FOOTER_MENU_LEFT, titleLeft],
+        ['titleRight', { titleRight: titleRight }, FOOTER_MENU_RIGHT, titleRight]
       ])(
         'Should pass proper %s propperties',
         (_, props, selector, expected) => {

@@ -19,11 +19,11 @@ export const CardItemContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    padding: 30px 80px 30px 0;
+    padding: 30px 50px;
   }
 
   @media (min-width: 576px) and (max-width: 767px) {
-    padding: 30px 50px 30px 0;
+    padding: 30px 40px;
   }
 
   @media (min-width: 480px) and (max-width: 575px) {
@@ -35,9 +35,17 @@ export const CardItemContainer = styled.div`
   }
 `
 
-export const CardItemIcon = styled.div`
-  @media (min-width: 480px){
-    padding: 80px 50px;
+export const CardItemIconContainer = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    margin: 0 50px 0 0;
+  }
+
+  @media (min-width: 480px) and (max-width: 767px) {
+    margin: 0 40px 0 0;
   }
 
   @media (max-width: 479px) {
@@ -45,9 +53,24 @@ export const CardItemIcon = styled.div`
   }
 `
 
-export const CardItemContent = styled.div`
-  text-align: left;
+export const CardItemIconContent = styled.div`
+  @media (min-width: 992px){
+    height: 70px;
+    width: 70px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px){
+    height: 60px;
+    width: 60px;
+  }
+
+  @media (min-width: 480px) and (max-width: 767px){
+    height: 50px;
+    width: 50px;
+  }
 `
+
+export const CardItemContent = styled.div``
 
 export const CardItemTitle = styled.div`
   color: ${PurpleDarkColor};

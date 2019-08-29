@@ -12,7 +12,7 @@ describe('FeaturesEmployer', () => {
   const itemsList = [
     {
       description: 'Custom Desription',
-      icon: 'Custom Icon'
+      icon: jest.fn()
     }
   ]
   const label = 'Custom Label'

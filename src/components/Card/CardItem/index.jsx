@@ -5,7 +5,8 @@ import {
   CardItemContainer,
   CardItemContent,
   CardItemDescription,
-  CardItemIcon,
+  CardItemIconContainer,
+  CardItemIconContent,
   CardItemTitle
 } from './components'
 
@@ -16,11 +17,19 @@ import {
 
 const CardItem = ({
   description,
-  icon,
+  icon: Icon,
   title
 }) => (
   <CardItemContainer>
-    <CardItemIcon data-test='cardItemIcon'>{icon}</CardItemIcon>
+    <CardItemIconContainer data-test='cardItemIconContainer'>
+      {
+        Icon && (
+          <CardItemIconContent>
+            <Icon data-test='cardItemIcon' />
+          </CardItemIconContent>
+        )
+      }
+    </CardItemIconContainer>
 
     <CardItemContent>
       <CardItemTitle>
@@ -38,6 +47,6 @@ export default CardItem
 
 CardItem.propTypes = {
   description: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.func,
   title: PropTypes.string
 }

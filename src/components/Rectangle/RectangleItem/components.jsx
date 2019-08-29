@@ -25,8 +25,14 @@ export const RectangleItemContainer = styled.div`
 `
 
 export const RectangleItemIcon = styled.div`
+  @media (min-width:768px){
+    width: 50px;
+    height: 50px;
+  }
+
   @media (max-width: 767px) {
-    text-align: center;
+    height: 40px;
+    width: 40px;
   }
 `
 

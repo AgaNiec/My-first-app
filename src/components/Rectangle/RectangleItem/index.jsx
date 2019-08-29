@@ -11,10 +11,16 @@ import { H4 } from '../../Typography/components'
 
 const RectangleItem = ({
   description,
-  icon
+  icon: Icon
 }) => (
   <RectangleItemContainer>
-    <RectangleItemIcon data-test='rectangleItemIcon'>{icon}</RectangleItemIcon>
+    {
+      Icon && (
+        <RectangleItemIcon>
+          <Icon data-test='rectangleIcon' />
+        </RectangleItemIcon>
+      )
+    }
 
     <RectangleItemDescription>
       <H4 data-test='rectangleItemDescriptionH4'>{description}</H4>
@@ -26,5 +32,5 @@ export default RectangleItem
 
 RectangleItem.prototypes = {
   description: PropTypes.string,
-  icon: PropTypes.string
+  icon: PropTypes.func
 }

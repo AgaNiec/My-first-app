@@ -7,9 +7,9 @@ describe('SocialList', () => {
   const SOCIAL_LIST_SOCIAL_ITEM = '[data-test="socialListSocialItem"]'
   const itemsList = [
     {
-      Icon: () => null,
       bgColor: 'Custom BgColor',
-      href: 'Custom Href'
+      href: 'Custom Href',
+      icon: jest.fn()
     }
   ]
 
@@ -24,9 +24,9 @@ describe('SocialList', () => {
 
     describe('Props', () => {
       test.each([
-        ['Icon', itemsList[0].Icon],
         ['bgColor', itemsList[0].bgColor],
-        ['href', itemsList[0].href]
+        ['href', itemsList[0].href],
+        ['icon', itemsList[0].icon]
       ])(
         'Should pass proper itemsList property',
         (prop, expected) => {

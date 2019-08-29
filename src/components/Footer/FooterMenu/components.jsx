@@ -5,7 +5,9 @@ import {
 } from '../../../assets/styles/colors'
 
 export const FooterMenuContainer = styled.div`
-  text-align: left;
+  @media (max-width: 991px) {
+    margin: 0 0 30px;
+  }
 `
 
 export const FooterMenuTitle = styled.div`

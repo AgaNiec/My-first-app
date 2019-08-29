@@ -7,6 +7,14 @@ export const FooterContainer = styled.div`
     max-width: 1200px;
     padding: 50px 0;
   }
+
+  @media (min-width: 768px) and (max-width: 991px){
+    padding: 40px 0;
+  }
+
+  @media (max-width: 767px){
+    padding: 30px 0;
+  }
 `
 
 export const FooterLeft = styled.div`
@@ -15,13 +23,13 @@ export const FooterLeft = styled.div`
     margin: 0 30px 0 0;
   }
 
-  @media (min-width: 568px) and (max-width: 991px) {
-    margin: 40px 0;
+  @media (min-width: 576px) and (max-width: 991px) {
+    margin: 0 0 40px;
   }
 
   
-  @media (max-width: 567px) {
-    margin: 30px 0;
+  @media (max-width: 575px) {
+    margin: 0 0 30px;
   }
 `
 
@@ -72,12 +80,6 @@ export const FooterRight = styled.div`
     & > div {
       padding-right: 30px;
       width: 50%;
-    }
-  }
-
-  @media (max-width: 567px) {
-    & > div {
-      margin: 50px 0 0;
     }
   }
 `

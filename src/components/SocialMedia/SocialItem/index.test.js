@@ -5,16 +5,23 @@ import 'jest-styled-components'
 import SocialItem from '.'
 
 describe('SocialItem', () => {
-  const Icon = () => null
-  const SOCIAL_ITEM_ICON = '[data-test="SocialItemIcon"]'
+  const SOCIAL_ITEM_ICON = '[data-test="socialItemIcon"]'
   const SOCIAL_ITEM_LINK = '[data-test="SocialItemLink"]'
   const bgColor = 'red'
   const href = 'Custom Href'
+  const icon = jest.fn()
 
   describe('Logic', () => {
+    it('Shlound render default component', () => {
+      const wrapper = shallow(
+        <SocialItem />
+      )
+
+      expect(wrapper.find(SOCIAL_ITEM_ICON).exists()).toBeFalsy()
+    })
+
     describe('Props', () => {
       test.each([
-        ['Icon', { Icon: Icon }, SOCIAL_ITEM_ICON, Icon],
         ['bgColor', { bgColor: bgColor }, SOCIAL_ITEM_LINK, bgColor],
         ['href', { href: href }, SOCIAL_ITEM_LINK, href]
       ])(
@@ -26,6 +33,14 @@ describe('SocialItem', () => {
 
           expect(wrapper.find(selector).prop(propName)).toEqual(expected)
         })
+
+      it('Should pass proper icon property', () => {
+        const wrapper = shallow(
+          <SocialItem icon={icon} />
+        )
+
+        expect(wrapper.find(SOCIAL_ITEM_ICON).type()).toEqual(icon)
+      })
     })
   })
 

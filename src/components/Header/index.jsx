@@ -10,9 +10,10 @@ import {
   HeaderLogo,
   HeaderMenuList
 } from './components'
-
 import { H4 } from '../Typography/components'
+
 import Button from '../Button'
+import Image from '../Image'
 import InnerWrapper from '../InnerWrapper'
 import MenuList from '../MenuList'
 
@@ -27,8 +28,12 @@ const Header = ({
 }) => (
   <InnerWrapper>
     <HeaderContainer>
-      <HeaderLogo data-test='headerLogo'>
-        {logo}
+      <HeaderLogo>
+        <Image
+          alt='StackFull'
+          data-test='headerLogo'
+          src={logo}
+        />
       </HeaderLogo>
 
       <HeaderMenuList>

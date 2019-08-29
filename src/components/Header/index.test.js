@@ -21,20 +21,15 @@ describe('Header', () => {
   }
 
   describe('Logic', () => {
-    test.each([
-      ['linkLabel', { linkLabel: linkLabel }, HEADER_LINK_H4, linkLabel],
-      ['logo', { logo: logo }, HEADER_LOGO, logo]
-    ])(
-      'Should pass proper %s property',
-      (_, props, selector, expected) => {
-        const wrapper = shallow(
-          <Header
-            {...defaultProps}
-            {...props} />
-        )
+    it('Should pass proper linkLabel property', () => {
+      const wrapper = shallow(
+        <Header
+          {...defaultProps}
+          linkLabel={linkLabel} />
+      )
 
-        expect(wrapper.find(selector).text()).toEqual(expected)
-      })
+      expect(wrapper.find(HEADER_LINK_H4).text()).toEqual(linkLabel)
+    })
 
     describe('Props', () => {
       test.each([
@@ -42,7 +37,8 @@ describe('Header', () => {
         ['buttonLabel', 'label', { buttonLabel: buttonLabel }, HEADER_BUTTON, buttonLabel],
         ['buttonOnClick', 'onClick', { buttonOnClick: buttonOnClickSpy }, HEADER_BUTTON, buttonOnClickSpy],
         ['linkHref', 'href', { linkHref: linkHref }, HEADER_LINK, linkHref],
-        ['linksList', 'linksList', { linksList: linksList }, MENU_LIST, linksList]
+        ['linksList', 'linksList', { linksList: linksList }, MENU_LIST, linksList],
+        ['src', 'src', { logo: logo }, HEADER_LOGO, logo]
       ])(
         'Should pass proper %s property',
         (_, propName, props, selector, expected) => {

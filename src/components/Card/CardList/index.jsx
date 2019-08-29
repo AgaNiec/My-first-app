@@ -36,7 +36,7 @@ CardList.propTypes = {
   itemsList: PropTypes.arrayOf(
     PropTypes.shape({
       description: PropTypes.string,
-      icon: PropTypes.string,
+      icon: PropTypes.func,
       title: PropTypes.string
     })
   )

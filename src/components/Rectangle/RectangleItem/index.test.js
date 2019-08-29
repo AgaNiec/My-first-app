@@ -4,24 +4,34 @@ import { shallow } from 'enzyme'
 import RectangleItem from '.'
 
 describe('RectangleItem', () => {
+  const RECTANGLE_ICON = '[data-test="rectangleIcon"]'
   const RECTANGLE_ITEM_DESCRIPTION_H4 = '[data-test="rectangleItemDescriptionH4"]'
-  const RECTANGLE_ITEM_ICON = '[data-test="rectangleItemIcon"]'
   const description = 'Custom Description'
-  const icon = 'Custom Icon'
+  const icon = jest.fn()
 
   describe('Logic', () => {
-    test.each([
-      ['description', { description: description }, RECTANGLE_ITEM_DESCRIPTION_H4, description],
-      ['icon', { icon: icon }, RECTANGLE_ITEM_ICON, icon]
-    ])(
-      'Should pass proper %s',
-      (_, props, selector, expected) => {
-        const wrapper = shallow(
-          <RectangleItem {...props} />
-        )
+    it('Should render default component', () => {
+      const wrapper = shallow(
+        <RectangleItem />
+      )
 
-        expect(wrapper.find(selector).text()).toEqual(expected)
-      }
-    )
+      expect(wrapper.find(RECTANGLE_ICON).exists()).toBeFalsy()
+    })
+
+    it('Should pass proper description property', () => {
+      const wrapper = shallow(
+        <RectangleItem description={description} />
+      )
+
+      expect(wrapper.find(RECTANGLE_ITEM_DESCRIPTION_H4).text()).toEqual(description)
+    })
+
+    it('Should pass proper icon property', () => {
+      const wrapper = shallow(
+        <RectangleItem icon={icon} />
+      )
+
+      expect(wrapper.find(RECTANGLE_ICON).type()).toEqual(icon)
+    })
   })
 })

@@ -10,3 +10,8 @@ export const SocialItemLink = styled.a`
   padding: 5px 10px;
   text-decoration: none;
 `
+
+export const SocialItemIconContainer = styled.div`
+  height: 20px;
+  width: 20px;
+`

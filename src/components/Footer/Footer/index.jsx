@@ -9,6 +9,7 @@ import {
 } from './components'
 
 import FooterMenu from '../FooterMenu'
+import Image from '../../Image'
 import InnerWrapper from '../../InnerWrapper'
 import SocialList from '../../SocialMedia/SocialList'
 
@@ -25,8 +26,12 @@ const Footer = ({
   <InnerWrapper>
     <FooterContainer>
       <FooterLeft>
-        <FooterLogo data-test='footerLogo'>
-          {logo}
+        <FooterLogo>
+          <Image
+            alt='StackFull'
+            data-test='footerLogo'
+            src={logo}
+          />
         </FooterLogo>
 
         <SocialList
@@ -74,7 +79,7 @@ Footer.propTypes = {
     PropTypes.shape({
       bgColor: PropTypes.string,
       href: PropTypes.string,
-      icon: PropTypes.string,
+      icon: PropTypes.func,
       label: PropTypes.string
     })
   ),

@@ -16,7 +16,6 @@ import Section from '../../../components/Section'
 
 const FeaturesEmployer = ({
   description,
-  icon,
   id,
   itemsList,
   label,
@@ -65,7 +64,7 @@ FeaturesEmployer.propTypes = {
   itemsList: PropTypes.arrayOf(
     PropTypes.shape({
       description: PropTypes.string,
-      icon: PropTypes.string
+      icon: PropTypes.func
     })
   ),
   description: PropTypes.string,

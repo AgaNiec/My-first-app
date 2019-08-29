@@ -13,13 +13,13 @@ const SocialList = ({
 }) => (
   <SocialListContainer>
     {
-      itemsList.map(({ bgColor, href, Icon }, index) => (
+      itemsList.map(({ bgColor, href, icon }, index) => (
         <SocialListElement key={index}>
           <SocialItem
-            Icon={Icon}
             bgColor={bgColor}
             data-test='socialListSocialItem'
             href={href}
+            icon={icon}
           />
         </SocialListElement>
       ))
@@ -32,9 +32,9 @@ export default SocialList
 SocialList.propTypes = {
   itemsList: PropTypes.arrayOf(
     PropTypes.shape({
-      Icon: PropTypes.func,
       bgColor: PropTypes.string,
-      href: PropTypes.string
+      href: PropTypes.string,
+      icon: PropTypes.func
     })
   )
 }
