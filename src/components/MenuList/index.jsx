@@ -52,6 +52,6 @@ MenuList.propType = {
 }
 
 MenuList.defaultProps = {
-  position: 'footer',
-  linksList: []
+  linksList: [],
+  position: 'footer'
 }

@@ -47,7 +47,7 @@ const Banner = ({
 
 export default Banner
 
-Banner.prototypes = {
+Banner.propTypes = {
   description: PropTypes.string,
   id: PropTypes.oneOfType([
     PropTypes.number,

@@ -30,7 +30,7 @@ const Rectangle = ({
 
 export default Rectangle
 
-Rectangle.prototypes = {
+Rectangle.propTypes = {
   description: PropTypes.string,
   icon: PropTypes.func
 }
