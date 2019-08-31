@@ -9,20 +9,18 @@ describe('Button', () => {
   const id = 'Custom Id'
   const label = 'Custom Label'
   const onClickSpy = jest.fn()
+  const type = 'reset'
   const defaultProps = {
     id: id
   }
 
   describe('Logic', () => {
-    it('Should pass proper id', () => {
+    it('Should pass proper default property', () => {
       const wrapper = shallow(
-        <Button
-          {...defaultProps}
-          id={id}
-        />
+        <Button {...defaultProps} />
       )
 
-      expect(wrapper.find(BUTTON_CONTAINER).prop('id')).toEqual(id)
+      expect(wrapper.find(BUTTON_CONTAINER).prop('type')).toEqual('button')
     })
 
     it('Should pass proper label', () => {
@@ -47,6 +45,24 @@ describe('Button', () => {
       wrapper.find(BUTTON_CONTAINER).simulate('click')
 
       expect(onClickSpy).toBeCalled()
+    })
+
+    describe('Props', () => {
+      test.each([
+        ['id', { id }, id],
+        ['type', { type }, type]
+      ])(
+        'Should pass proper %s property',
+        (propName, props, expected) => {
+          const wrapper = shallow(
+            <Button
+              {...defaultProps}
+              {...props}
+            />
+          )
+
+          expect(wrapper.find(BUTTON_CONTAINER).prop(propName)).toEqual(expected)
+        })
     })
   })
 })

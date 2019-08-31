@@ -8,12 +8,14 @@ import { H4 } from '../Typography/components'
 const Button = ({
   id,
   label,
-  onClick
+  onClick,
+  type
 }) => (
   <ButtonContainer
     data-test='buttonContainer'
     id={id}
     onClick={onClick}
+    type={type}
   >
     <H4 data-test='buttonContainerH4'>{label}</H4>
   </ButtonContainer>
@@ -27,5 +29,14 @@ Button.propTypes = {
     PropTypes.string
   ]).isRequired,
   label: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  type: PropTypes.oneOf([
+    'button',
+    'reset',
+    'submit'
+  ])
+}
+
+Button.defaultProps = {
+  type: 'button'
 }
