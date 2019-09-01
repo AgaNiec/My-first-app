@@ -13,7 +13,7 @@ const FooterMenu = ({
   linksList,
   title
 }) => (
-  <FooterMenuContainer>
+  <FooterMenuContainer data-test='footerMenuContainer'>
     <FooterMenuTitle>
       <H4 data-test='footerMenuTitleH4'>{title}</H4>
     </FooterMenuTitle>
