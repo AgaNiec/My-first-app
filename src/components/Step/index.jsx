@@ -20,7 +20,7 @@ const Step = ({
   number,
   title
 }) => (
-  <StepContainer>
+  <StepContainer data-test='stepContainer'>
     <StepNumber>
       <Large data-test='stepNumberLarge'>{number}</Large>
     </StepNumber>
