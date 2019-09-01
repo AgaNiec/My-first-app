@@ -1,5 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
+import 'jest-styled-components'
 
 import Button from '.'
 
@@ -9,7 +10,7 @@ describe('Button', () => {
   const id = 'Custom Id'
   const label = 'Custom Label'
   const onClickSpy = jest.fn()
-  const type = 'reset'
+  const type = 'button'
   const defaultProps = {
     id: id
   }
@@ -63,6 +64,28 @@ describe('Button', () => {
 
           expect(wrapper.find(BUTTON_CONTAINER).prop(propName)).toEqual(expected)
         })
+    })
+  })
+
+  describe('UI', () => {
+    describe('MediaQueries', () => {
+      describe('ButtonContainer', () => {
+        test.each([
+          ['(min-width: 992px)', 'padding', '15px 45px'],
+          ['(min-width: 768px) and (max-width: 991px)', 'padding', '15px 35px'],
+          ['(min-width: 576px) and (max-width: 767px)', 'padding', '15px 25px'],
+          ['(min-width: 480px) and (max-width: 575px)', 'padding', '12px 20px'],
+          ['(max-width: 479px)', 'padding', '10px 15px']
+        ])(
+          'Should render proper styles for %s resolution',
+          (mediaQueries, property, propertyValue) => {
+            const wrapper = mount(
+              <Button {...defaultProps} />
+            )
+
+            expect(wrapper.find(BUTTON_CONTAINER)).toHaveStyleRule(property, propertyValue, { media: mediaQueries })
+          })
+      })
     })
   })
 })
