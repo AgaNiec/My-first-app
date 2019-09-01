@@ -6,7 +6,9 @@ import { InnerWrapperContainer } from './components'
 const InnerWrapper = ({
   children
 }) => (
-  <InnerWrapperContainer>{children}</InnerWrapperContainer>
+  <InnerWrapperContainer data-test='innerWrapperContainer'>
+    {children}
+  </InnerWrapperContainer>
 )
 
 export default InnerWrapper
