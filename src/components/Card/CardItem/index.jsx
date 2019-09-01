@@ -20,11 +20,11 @@ const CardItem = ({
   icon: Icon,
   title
 }) => (
-  <CardItemContainer>
+  <CardItemContainer data-test='cardItemContainer'>
     <CardItemIconContainer data-test='cardItemIconContainer'>
       {
         Icon && (
-          <CardItemIconContent>
+          <CardItemIconContent data-test='cardItemIconContent'>
             <Icon data-test='cardItemIcon' />
           </CardItemIconContent>
         )
