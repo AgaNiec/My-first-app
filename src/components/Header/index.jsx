@@ -28,7 +28,10 @@ const Header = ({
 }) => (
   <InnerWrapper>
     <HeaderContainer>
-      <HeaderLogoLink href='/'>
+      <HeaderLogoLink
+        data-test='headerLogoLink'
+        href='/'
+      >
         <Image
           alt='StackFull'
           data-test='headerLogo'
@@ -36,7 +39,7 @@ const Header = ({
         />
       </HeaderLogoLink>
 
-      <HeaderMenuList>
+      <HeaderMenuList data-test='headerMenuList'>
         <MenuList
           data-test='menuList'
           linksList={linksList}
