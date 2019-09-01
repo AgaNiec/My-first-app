@@ -1,9 +1,11 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
+import 'jest-styled-components'
 
 import SocialList from '.'
 
 describe('SocialList', () => {
+  const SOCIAL_LIST_CONTAINER = '[data-test="socialListContainer"]'
   const SOCIAL_LIST_SOCIAL_ITEM = '[data-test="socialListSocialItem"]'
   const itemsList = [
     {
@@ -36,6 +38,20 @@ describe('SocialList', () => {
 
           expect(wrapper.find(SOCIAL_LIST_SOCIAL_ITEM).prop(prop)).toEqual(expected)
         })
+    })
+  })
+
+  describe('UI', () => {
+    describe('MediaQueries', () => {
+      describe('SocialListContainer', () => {
+        it('Should render proper styles for (max-width: 991px) resolution ', () => {
+          const wrapper = mount(
+            <SocialList />
+          )
+
+          expect(wrapper.find(SOCIAL_LIST_CONTAINER)).toHaveStyleRule('justify-content', 'center', { media: '(max-width: 991px)' })
+        })
+      })
     })
   })
 })

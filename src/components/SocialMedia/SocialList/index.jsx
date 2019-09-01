@@ -11,7 +11,7 @@ import SocialItem from '../SocialItem'
 const SocialList = ({
   itemsList
 }) => (
-  <SocialListContainer>
+  <SocialListContainer data-test='socialListContainer'>
     {
       itemsList.map(({ bgColor, href, icon }, index) => (
         <SocialListElement key={index}>
