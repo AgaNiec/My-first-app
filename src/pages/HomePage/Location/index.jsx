@@ -28,10 +28,12 @@ const Location = ({
       title={title}
     />
 
-    <LocationStepContainer>
+    <LocationStepContainer data-test='locationStepContainer'>
       {
         itemsList.map(({ description, number, title }, index) => (
-          <StepElement key={index}>
+          <StepElement
+            data-test='stepElement'
+            key={index}>
             <Step
               data-test='stepContainer'
               description={description}
@@ -43,7 +45,7 @@ const Location = ({
       }
     </LocationStepContainer>
 
-    <LocationButton>
+    <LocationButton data-test='locationButtonContainer'>
       <Button
         data-test='locationButton'
         id={id}
