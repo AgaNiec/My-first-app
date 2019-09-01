@@ -23,8 +23,8 @@ const Banner = ({
   onClick,
   title
 }) => (
-  <BannerContainer>
-    <BannerContent>
+  <BannerContainer data-test='bannerContainer'>
+    <BannerContent data-test='bannerContent'>
       <BannerTitle>
         <H1 data-test='bannerTitleH1'>{title}</H1>
       </BannerTitle>
@@ -34,7 +34,7 @@ const Banner = ({
       </BannerDescription>
     </BannerContent>
 
-    <BannerButton>
+    <BannerButton data-test='bannerButtonContent'>
       <Button
         data-test='bannerButton'
         id={id}
