@@ -22,7 +22,7 @@ const Attractions = ({
   onClick,
   title
 }) => (
-  <AttractionsContainer>
+  <AttractionsContainer data-test='attractionsContainer'>
     <AttractionsLeft >
       <AttractionsSection>
         <Section
@@ -32,7 +32,7 @@ const Attractions = ({
         />
       </AttractionsSection>
 
-      <AttractionsButton>
+      <AttractionsButton data-test='attractionsButtonContainer'>
         <Button
           data-test='attractionsButton'
           id={id}
@@ -42,10 +42,13 @@ const Attractions = ({
       </AttractionsButton>
     </AttractionsLeft>
 
-    <AttractionsRight>
+    <AttractionsRight data-test='attractionsRight'>
       {
         itemsList.map(({ description, icon }, index) => (
-          <AttractionsRectangle key={index}>
+          <AttractionsRectangle
+            data-test='attractionsRectangleContainer'
+            key={index}
+          >
             <Rectangle
               data-test='attractionsRectangle'
               description={description}
@@ -61,17 +64,17 @@ const Attractions = ({
 export default Attractions
 
 Attractions.propTypes = {
+  description: PropTypes.string,
+  id: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]).isRequired,
   itemsList: PropTypes.arrayOf(
     PropTypes.shape({
       description: PropTypes.string,
       icon: PropTypes.func
     })
   ),
-  description: PropTypes.string,
-  id: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]).isRequired,
   label: PropTypes.string,
   onClick: PropTypes.func,
   title: PropTypes.string
