@@ -27,7 +27,6 @@ export const FooterLeft = styled.div`
     margin: 0 0 40px;
   }
 
-  
   @media (max-width: 575px) {
     margin: 0 0 30px;
   }
@@ -77,12 +76,5 @@ export const FooterRight = styled.div`
 
   @media (min-width: 568px) {
     display: flex;
-  }
-
-  @media (min-width: 568px) and (max-width: 767px) {
-    & > div {
-      padding-right: 30px;
-      width: 50%;
-    }
   }
 `

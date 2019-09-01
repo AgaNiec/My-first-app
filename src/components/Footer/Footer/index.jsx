@@ -24,9 +24,9 @@ const Footer = ({
   titleRight
 }) => (
   <InnerWrapper>
-    <FooterContainer>
-      <FooterLeft>
-        <FooterLogoLink>
+    <FooterContainer data-test='footerContainer'>
+      <FooterLeft data-test='footerLeft'>
+        <FooterLogoLink data-test='footerLogoLink'>
           <Image
             alt='StackFull'
             data-test='footerLogo'
@@ -40,7 +40,7 @@ const Footer = ({
         />
       </FooterLeft>
 
-      <FooterRight>
+      <FooterRight data-test='footerRight'>
         <FooterMenu
           data-test='footerMenuLeft'
           linksList={linksListLeft}
