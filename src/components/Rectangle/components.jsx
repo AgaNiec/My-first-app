@@ -25,9 +25,9 @@ export const RectangleContainer = styled.div`
 `
 
 export const RectangleIcon = styled.div`
-  @media (min-width:768px){
-    width: 50px;
+  @media (min-width: 768px){
     height: 50px;
+    width: 50px;
   }
 
   @media (max-width: 767px) {

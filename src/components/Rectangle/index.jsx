@@ -13,10 +13,10 @@ const Rectangle = ({
   description,
   icon: Icon
 }) => (
-  <RectangleContainer>
+  <RectangleContainer data-test='rectangleContainer'>
     {
       Icon && (
-        <RectangleIcon>
+        <RectangleIcon data-test='rectangleIconContainer'>
           <Icon data-test='rectangleIcon' />
         </RectangleIcon>
       )
