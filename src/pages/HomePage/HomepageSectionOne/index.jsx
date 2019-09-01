@@ -20,17 +20,17 @@ const HomepageSectionOne = ({
   onClick,
   title
 }) => (
-  <HomepageSectionOneContainer>
-    <HomepageSectionOneLeft>
+  <HomepageSectionOneContainer data-test='homepageSectionOneContainer'>
+    <HomepageSectionOneLeft data-test='homepageSectionOneLeft'>
       <Section
-        data-test='HomepageSectionOneSection'
+        data-test='homepageSectionOneSection'
         description={description}
         title={title}
       />
 
-      <HomepageSectionOneButton>
+      <HomepageSectionOneButton data-test='homepageSectionOneButtonContainer'>
         <Button
-          data-test='HomepageSectionOneButton'
+          data-test='homepageSectionOneButton'
           id={id}
           label={label}
           onClick={onClick}
@@ -39,9 +39,9 @@ const HomepageSectionOne = ({
 
     </HomepageSectionOneLeft>
 
-    <HomepageSectionOneRight>
+    <HomepageSectionOneRight data-test='homepageSectionOneRight'>
       <Icon
-        data-test='HomepageSectionOneIcon'
+        data-test='homepageSectionOneIcon'
         icon={icon}
       />
     </HomepageSectionOneRight>
