@@ -1,5 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
+import 'jest-styled-components'
 
 import Section from '.'
 
@@ -47,6 +48,25 @@ describe('Section', () => {
 
           expect(wrapper.find(selector).text()).toEqual(expected)
         })
+    })
+  })
+
+  describe('UI', () => {
+    describe('MediaQueries', () => {
+      describe('SectionContainer', () => {
+        test.each([
+          ['(min-width: 992px)', 'text-align', 'left'],
+          ['(max-width: 991px)', 'text-align', 'center']
+        ])(
+          'Should render proper styles for %s resolution when align="left"',
+          (mediaQueries, property, propertyValue) => {
+            const wrapper = mount(
+              <Section align='left' />
+            )
+
+            expect(wrapper.find(SECTION_CONTAINER)).toHaveStyleRule(property, propertyValue, { media: mediaQueries })
+          })
+      })
     })
   })
 })
