@@ -1,11 +1,13 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
+import 'jest-styled-components'
 
 import Site from '.'
 import { SiteContentContainer } from './components'
 
 describe('Site', () => {
   const CONTENT = 'Custom Content'
+  const SITE_FOOTER = '[data-test="siteFooter"]'
   const SITE_FOOTER_CONTAINER = '[data-test="siteFooterContainer"]'
   const SITE_HEADEDR_CONTAINER = '[data-test="siteHeaderContainer"]'
   const buttonId = 'Custom Button Id'
@@ -43,15 +45,15 @@ describe('Site', () => {
         ['buttonOnClick', { buttonOnClick: onClickSpy }, SITE_HEADEDR_CONTAINER, onClickSpy],
         ['linkHref', { linkHref }, SITE_HEADEDR_CONTAINER, linkHref],
         ['linkLabel', { linkLabel }, SITE_HEADEDR_CONTAINER, linkLabel],
-        ['linksListCenter', { linksListCenter }, SITE_FOOTER_CONTAINER, linksListCenter],
-        ['linksListLeft', { linksListLeft }, SITE_FOOTER_CONTAINER, linksListLeft],
-        ['linksListRight', { linksListRight }, SITE_FOOTER_CONTAINER, linksListRight],
-        ['logo', { logo }, SITE_FOOTER_CONTAINER, logo],
+        ['linksListCenter', { linksListCenter }, SITE_FOOTER, linksListCenter],
+        ['linksListLeft', { linksListLeft }, SITE_FOOTER, linksListLeft],
+        ['linksListRight', { linksListRight }, SITE_FOOTER, linksListRight],
+        ['logo', { logo }, SITE_FOOTER, logo],
         ['logo', { logo }, SITE_HEADEDR_CONTAINER, logo],
-        ['socialItemsList', { socialItemsList }, SITE_FOOTER_CONTAINER, socialItemsList],
-        ['titleCenter', { titleCenter }, SITE_FOOTER_CONTAINER, titleCenter],
-        ['titleLeft', { titleLeft }, SITE_FOOTER_CONTAINER, titleLeft],
-        ['titleRight', { titleRight }, SITE_FOOTER_CONTAINER, titleRight]
+        ['socialItemsList', { socialItemsList }, SITE_FOOTER, socialItemsList],
+        ['titleCenter', { titleCenter }, SITE_FOOTER, titleCenter],
+        ['titleLeft', { titleLeft }, SITE_FOOTER, titleLeft],
+        ['titleRight', { titleRight }, SITE_FOOTER, titleRight]
       ])(
         'Should pass proper %s property',
         (propsName, prop, selector, expected) => {
@@ -64,6 +66,26 @@ describe('Site', () => {
 
           expect(wrapper.find(selector).prop(propsName)).toEqual(expected)
         })
+    })
+  })
+
+  describe('UI', () => {
+    describe('MediaQueries', () => {
+      describe('SiteFooterContainer', () => {
+        test.each([
+          ['(min-width: 992px)', 'margin', '200px 0 0'],
+          ['(min-width: 576px) and (max-width: 991px)', 'margin', '180px 0 0'],
+          ['(max-width: 575px)', 'margin', '150px 0 0']
+        ])(
+          'Should render proper styles for %s resolution',
+          (mediaQueries, property, propertyValue) => {
+            const wrapper = mount(
+              <Site {...defaultProps} />
+            )
+
+            expect(wrapper.find(SITE_FOOTER_CONTAINER)).toHaveStyleRule(property, propertyValue, { media: mediaQueries })
+          })
+      })
     })
   })
 })

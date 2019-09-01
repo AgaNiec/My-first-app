@@ -46,13 +46,13 @@ const Site = ({
       {children}
     </SiteContentContainer>
 
-    <SiteFooterContainer>
+    <SiteFooterContainer data-test='siteFooterContainer'>
       <Footer
-        data-test='siteFooterContainer'
-        logo={logo}
+        data-test='siteFooter'
         linksListCenter={linksListCenter}
         linksListLeft={linksListLeft}
         linksListRight={linksListRight}
+        logo={logo}
         socialItemsList={socialItemsList}
         titleCenter={titleCenter}
         titleLeft={titleLeft}
@@ -80,11 +80,11 @@ Site.propTypes = {
   buttonOnClick: PropTypes.func,
   children: PropTypes.string,
   linkHref: PropTypes.string,
-  logo: PropTypes.string,
   linkLabel: PropTypes.string,
   linksListCenter: linksListPropTypes,
   linksListLeft: linksListPropTypes,
   linksListRight: linksListPropTypes,
+  logo: PropTypes.string,
   socialItemsList: PropTypes.arrayOf(
     PropTypes.shape({
       bgColor: PropTypes.string,
