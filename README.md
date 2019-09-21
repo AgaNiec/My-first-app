@@ -41,6 +41,6 @@ In ths project I used:
 - PropTypes
 - Standard
 
- ## Other Informations
+## Other Informations
 
 Application support Mobile Devices.
